@@ -1,0 +1,930 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "FIDL",
+    "scopeName": "source.fidl",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "name": "meta.library.fidl",
+            "match": "\\b(library)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(;)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "punctuation.terminator"
+                }
+            }
+        },
+        {
+            "name": "meta.library.fidl",
+            "match": "\\b(using)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(;)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "punctuation.terminator"
+                }
+            }
+        },
+        {
+            "name": "meta.library.fidl",
+            "match": "\\b(using)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*\\b(as)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(;)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "keyword.control"
+                },
+                "4": {
+                    "name": "entity.name.type"
+                },
+                "5": {
+                    "name": "punctuation.terminator"
+                }
+            }
+        },
+        {
+            "name": "meta.library.fidl",
+            "match": "\\b(using)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(=)\\s*(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*(;)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "punctuation.separator"
+                },
+                "4": {
+                    "name": "entity.name.type"
+                },
+                "5": {
+                    "name": "storage.type.basic"
+                },
+                "6": {
+                    "name": "storage.type.basic"
+                },
+                "7": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "8": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "9": {
+                    "name": "punctuation.nullable"
+                },
+                "10": {
+                    "name": "storage.type.basic"
+                },
+                "11": {
+                    "name": "storage.type.basic"
+                },
+                "12": {
+                    "name": "storage.type.basic"
+                },
+                "13": {
+                    "name": "storage.type.basic"
+                },
+                "14": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "15": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "16": {
+                    "name": "punctuation.separator"
+                },
+                "17": {
+                    "name": "constant.numeric"
+                },
+                "18": {
+                    "name": "punctuation.nullable"
+                },
+                "19": {
+                    "name": "punctuation.terminator"
+                }
+            }
+        },
+        {
+            "name": "meta.const.fidl",
+            "match": "\\b(const)\\b\\s*(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(=)\\s*(?:@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*|(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|(\\b(?:true|false)\\b))\\s*(;)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "storage.type.basic"
+                },
+                "3": {
+                    "name": "variable.constant"
+                },
+                "4": {
+                    "name": "punctuation.separator"
+                },
+                "5": {
+                    "name": "constant.numeric"
+                },
+                "6": {
+                    "name": "constant.language"
+                },
+                "7": {
+                    "name": "punctuation.terminator"
+                }
+            }
+        },
+        {
+            "name": "meta.protocol-block.fidl",
+            "begin": "\\b(protocol)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "name": "meta.attrbutes.fidl",
+                    "begin": "\\[",
+                    "beginCaptures": {},
+                    "end": "\\]",
+                    "endCaptures": {},
+                    "patterns": [
+                        {
+                            "match": "(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(?:=\\s*(\"(?:[^\\\"]|\\.)*\"))?",
+                            "captures": {
+                                "1": {
+                                    "name": "support.variable"
+                                },
+                                "2": {
+                                    "name": "string.quoted.double"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "match": "\\b(compose)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        }
+                    }
+                },
+                {
+                    "include": "#method"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        },
+        {
+            "name": "meta.enum-block.fidl",
+            "begin": "\\b(enum)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(?:(:)\\s*(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?)))?\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "punctuation.separator"
+                },
+                "4": {
+                    "name": "entity.name.type"
+                },
+                "5": {
+                    "name": "storage.type.basic"
+                },
+                "6": {
+                    "name": "storage.type.basic"
+                },
+                "7": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "8": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "9": {
+                    "name": "punctuation.nullable"
+                },
+                "10": {
+                    "name": "storage.type.basic"
+                },
+                "11": {
+                    "name": "storage.type.basic"
+                },
+                "12": {
+                    "name": "storage.type.basic"
+                },
+                "13": {
+                    "name": "storage.type.basic"
+                },
+                "14": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "15": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "16": {
+                    "name": "punctuation.separator"
+                },
+                "17": {
+                    "name": "constant.numeric"
+                },
+                "18": {
+                    "name": "punctuation.nullable"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "include": "#enum-member"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        },
+        {
+            "name": "meta.bits-block.fidl",
+            "begin": "\\b(bits)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(?:(:)\\s*(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?)))?\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                },
+                "3": {
+                    "name": "punctuation.separator"
+                },
+                "4": {
+                    "name": "entity.name.type"
+                },
+                "5": {
+                    "name": "storage.type.basic"
+                },
+                "6": {
+                    "name": "storage.type.basic"
+                },
+                "7": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "8": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "9": {
+                    "name": "punctuation.nullable"
+                },
+                "10": {
+                    "name": "storage.type.basic"
+                },
+                "11": {
+                    "name": "storage.type.basic"
+                },
+                "12": {
+                    "name": "storage.type.basic"
+                },
+                "13": {
+                    "name": "storage.type.basic"
+                },
+                "14": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "15": {
+                    "name": "punctuation.bracket.angle"
+                },
+                "16": {
+                    "name": "punctuation.separator"
+                },
+                "17": {
+                    "name": "constant.numeric"
+                },
+                "18": {
+                    "name": "punctuation.nullable"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "include": "#enum-member"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        },
+        {
+            "name": "meta.struct-block.fidl",
+            "begin": "\\b(struct)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "include": "#struct-member"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        },
+        {
+            "name": "meta.table-block.fidl",
+            "begin": "\\b(table)\\b\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "entity.name.type"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "include": "#table-member"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        },
+        {
+            "name": "meta.union-block.fidl",
+            "begin": "(?:\\b(union)\\b|\\b(xunion)\\b)\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*{",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {
+                    "name": "keyword.control"
+                },
+                "3": {
+                    "name": "entity.name.type"
+                }
+            },
+            "end": "}",
+            "endCaptures": {},
+            "patterns": [
+                {
+                    "include": "#union-member"
+                },
+                {
+                    "include": "#comments"
+                }
+            ]
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "invalid.illegal.stray-comment-end.fidl",
+                    "match": "\\*/.*\\n",
+                    "captures": {}
+                },
+                {
+                    "name": "comment.line.documentation.fidl",
+                    "match": "///.*\\n",
+                    "captures": {}
+                },
+                {
+                    "name": "comment.line.double-slash.fidl",
+                    "match": "//.*\\n",
+                    "captures": {}
+                }
+            ]
+        },
+        "method": {
+            "patterns": [
+                {
+                    "name": "meta.method.fidl",
+                    "begin": "(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.function"
+                        }
+                    },
+                    "end": "(?:\\b(error)\\b\\s*[(]\\s*(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*[)])?\\s*(;)",
+                    "endCaptures": {
+                        "1": {
+                            "name": "keyword.control"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "storage.type.basic"
+                        },
+                        "4": {
+                            "name": "storage.type.basic"
+                        },
+                        "5": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "6": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "7": {
+                            "name": "punctuation.nullable"
+                        },
+                        "8": {
+                            "name": "storage.type.basic"
+                        },
+                        "9": {
+                            "name": "storage.type.basic"
+                        },
+                        "10": {
+                            "name": "storage.type.basic"
+                        },
+                        "11": {
+                            "name": "storage.type.basic"
+                        },
+                        "12": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "13": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "14": {
+                            "name": "punctuation.separator"
+                        },
+                        "15": {
+                            "name": "constant.numeric"
+                        },
+                        "16": {
+                            "name": "punctuation.nullable"
+                        },
+                        "17": {
+                            "name": "punctuation.terminator"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#method-arguments"
+                        },
+                        {
+                            "match": "(->)",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.separator"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "meta.method.event.fidl",
+                    "begin": "(->)\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*[(]",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "punctuation.separator"
+                        },
+                        "2": {
+                            "name": "entity.name.function"
+                        }
+                    },
+                    "end": "[)]\\s*(;)",
+                    "endCaptures": {
+                        "1": {
+                            "name": "punctuation.terminator"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#method-argument"
+                        }
+                    ]
+                }
+            ]
+        },
+        "method-arguments": {
+            "patterns": [
+                {
+                    "name": "meta.method.arguments.fidl",
+                    "begin": "\\(",
+                    "beginCaptures": {},
+                    "end": "\\)",
+                    "endCaptures": {},
+                    "patterns": [
+                        {
+                            "include": "#method-argument"
+                        }
+                    ]
+                }
+            ]
+        },
+        "method-argument": {
+            "patterns": [
+                {
+                    "name": "meta.method.argument.fidl",
+                    "begin": "(?=[a-zA-Z_@])",
+                    "beginCaptures": {},
+                    "end": "(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(?:(?:,)|(?=\\)))",
+                    "endCaptures": {
+                        "1": {
+                            "name": "variable.name"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))",
+                            "captures": {
+                                "1": {
+                                    "name": "entity.name.type"
+                                },
+                                "2": {
+                                    "name": "storage.type.basic"
+                                },
+                                "3": {
+                                    "name": "storage.type.basic"
+                                },
+                                "4": {
+                                    "name": "punctuation.bracket.angle"
+                                },
+                                "5": {
+                                    "name": "punctuation.bracket.angle"
+                                },
+                                "6": {
+                                    "name": "punctuation.nullable"
+                                },
+                                "7": {
+                                    "name": "storage.type.basic"
+                                },
+                                "8": {
+                                    "name": "storage.type.basic"
+                                },
+                                "9": {
+                                    "name": "storage.type.basic"
+                                },
+                                "10": {
+                                    "name": "storage.type.basic"
+                                },
+                                "11": {
+                                    "name": "punctuation.bracket.angle"
+                                },
+                                "12": {
+                                    "name": "punctuation.bracket.angle"
+                                },
+                                "13": {
+                                    "name": "punctuation.separator"
+                                },
+                                "14": {
+                                    "name": "constant.numeric"
+                                },
+                                "15": {
+                                    "name": "punctuation.nullable"
+                                }
+                            }
+                        },
+                        {
+                            "match": "(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)",
+                            "captures": {
+                                "1": {
+                                    "name": "variable.parameter"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "enum-member": {
+            "patterns": [
+                {
+                    "name": "meta.enum.member.fidl",
+                    "match": "(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(=)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "variable"
+                        },
+                        "2": {
+                            "name": "punctuation.separator"
+                        },
+                        "3": {
+                            "name": "constant.numeric"
+                        },
+                        "4": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                }
+            ]
+        },
+        "struct-member": {
+            "patterns": [
+                {
+                    "name": "meta.struct.member.fidl",
+                    "match": "(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.type"
+                        },
+                        "2": {
+                            "name": "storage.type.basic"
+                        },
+                        "3": {
+                            "name": "storage.type.basic"
+                        },
+                        "4": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "5": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "6": {
+                            "name": "punctuation.nullable"
+                        },
+                        "7": {
+                            "name": "storage.type.basic"
+                        },
+                        "8": {
+                            "name": "storage.type.basic"
+                        },
+                        "9": {
+                            "name": "storage.type.basic"
+                        },
+                        "10": {
+                            "name": "storage.type.basic"
+                        },
+                        "11": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "12": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "13": {
+                            "name": "punctuation.separator"
+                        },
+                        "14": {
+                            "name": "constant.numeric"
+                        },
+                        "15": {
+                            "name": "punctuation.nullable"
+                        },
+                        "16": {
+                            "name": "variable"
+                        },
+                        "17": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                },
+                {
+                    "name": "meta.struct.member.fidl",
+                    "match": "(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(=)\\s*(?:(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|(\\b(?:true|false)\\b)|(\"(?:[^\\\"]|\\.)*\"))|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.type"
+                        },
+                        "2": {
+                            "name": "storage.type.basic"
+                        },
+                        "3": {
+                            "name": "storage.type.basic"
+                        },
+                        "4": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "5": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "6": {
+                            "name": "punctuation.nullable"
+                        },
+                        "7": {
+                            "name": "storage.type.basic"
+                        },
+                        "8": {
+                            "name": "storage.type.basic"
+                        },
+                        "9": {
+                            "name": "storage.type.basic"
+                        },
+                        "10": {
+                            "name": "storage.type.basic"
+                        },
+                        "11": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "12": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "13": {
+                            "name": "punctuation.separator"
+                        },
+                        "14": {
+                            "name": "constant.numeric"
+                        },
+                        "15": {
+                            "name": "punctuation.nullable"
+                        },
+                        "16": {
+                            "name": "variable"
+                        },
+                        "17": {
+                            "name": "punctuation.separator"
+                        },
+                        "18": {
+                            "name": "constant.numeric"
+                        },
+                        "19": {
+                            "name": "constant.language"
+                        },
+                        "20": {
+                            "name": "string.quoted.double"
+                        },
+                        "21": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                }
+            ]
+        },
+        "table-member": {
+            "patterns": [
+                {
+                    "name": "meta.table.member.fidl",
+                    "match": "(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)\\s*(:)\\s*(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "constant.numeric"
+                        },
+                        "2": {
+                            "name": "punctuation.separator"
+                        },
+                        "3": {
+                            "name": "entity.name.type"
+                        },
+                        "4": {
+                            "name": "storage.type.basic"
+                        },
+                        "5": {
+                            "name": "storage.type.basic"
+                        },
+                        "6": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "7": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "8": {
+                            "name": "punctuation.nullable"
+                        },
+                        "9": {
+                            "name": "storage.type.basic"
+                        },
+                        "10": {
+                            "name": "storage.type.basic"
+                        },
+                        "11": {
+                            "name": "storage.type.basic"
+                        },
+                        "12": {
+                            "name": "storage.type.basic"
+                        },
+                        "13": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "14": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "15": {
+                            "name": "punctuation.separator"
+                        },
+                        "16": {
+                            "name": "constant.numeric"
+                        },
+                        "17": {
+                            "name": "punctuation.nullable"
+                        },
+                        "18": {
+                            "name": "variable"
+                        },
+                        "19": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                },
+                {
+                    "name": "meta.table.reserved.fidl",
+                    "match": "(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)\\s*(:)\\s*\\b(reserved)\\b\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "constant.numeric"
+                        },
+                        "2": {
+                            "name": "punctuation.separator"
+                        },
+                        "3": {
+                            "name": "keyword.control"
+                        },
+                        "4": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                }
+            ]
+        },
+        "union-member": {
+            "patterns": [
+                {
+                    "name": "meta.union.member.fidl",
+                    "match": "(?<type-constructor>(?:(\\b(?:bool|float32|float64|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\\b)|(\\bhandle\\b\\s*(?:(<)\\s*\\b(?:bti|channel|debuglog|event|eventpair|fifo|guest|interrupt|job|port|process|profile|resource|socket|thread|timer|vmar|vmo)\\b\\s*(>))?\\s*([?]))|(?:\\b(vector)\\b|\\b(array)\\b|\\b(request)\\b|(\\bstring\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*)\\s*(?:(<)\\s*\\g<type-constructor>\\s*(>))?\\s*(?:(:)\\s*(?:(-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b)|@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b(?:\\.@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)*))?\\s*(?:([?]))?))\\s*(@?\\b[a-zA-Z_][0-9a-zA-Z_]*\\b)\\s*(;)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.type"
+                        },
+                        "2": {
+                            "name": "storage.type.basic"
+                        },
+                        "3": {
+                            "name": "storage.type.basic"
+                        },
+                        "4": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "5": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "6": {
+                            "name": "punctuation.nullable"
+                        },
+                        "7": {
+                            "name": "storage.type.basic"
+                        },
+                        "8": {
+                            "name": "storage.type.basic"
+                        },
+                        "9": {
+                            "name": "storage.type.basic"
+                        },
+                        "10": {
+                            "name": "storage.type.basic"
+                        },
+                        "11": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "12": {
+                            "name": "punctuation.bracket.angle"
+                        },
+                        "13": {
+                            "name": "punctuation.separator"
+                        },
+                        "14": {
+                            "name": "constant.numeric"
+                        },
+                        "15": {
+                            "name": "punctuation.nullable"
+                        },
+                        "16": {
+                            "name": "variable"
+                        },
+                        "17": {
+                            "name": "punctuation.terminator"
+                        }
+                    }
+                }
+            ]
+        },
+        "attributes": {
+            "patterns": [
+            ]
+        }
+    }
+}
