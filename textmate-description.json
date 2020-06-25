@@ -1,0 +1,362 @@
+[
+    {
+        "id": "g",
+        "extensions": "g G g4 G4",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\antlr\\\\antlr.tmLanguage.json",
+        "languageServer": "",
+        "name": "ANTLR(4) Files (.g & .g4)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\antlr\\\\g.png",
+        "mimeType": "text/x-ext-g"
+    },
+    {
+        "id": "bat",
+        "extensions": "bat BAT cmd CMD",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\batch\\\\bat.tmLanguage.json",
+        "languageServer": "",
+        "name": "Batch Files (.bat & .cmd)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\batch\\\\bat.png",
+        "mimeType": "text/x-ext-bat"
+    },
+    {
+        "id": "bf",
+        "extensions": "b B bf BF",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\brainfuck\\\\brainfuck.tmLanguage.json",
+        "languageServer": "",
+        "name": "Brainfuck Files (.b & .bf)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\brainfuck\\\\bf.png",
+        "mimeType": "text/x-ext-bf"
+    },
+    {
+        "id": "bsq",
+        "extensions": "bsq BSQ",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\bosque\\\\bsq.tmLanguage.json",
+        "languageServer": "",
+        "name": "Bosque Files (.bsq)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\bosque\\\\bsq.png",
+        "mimeType": "text/x-ext-bsq"
+    },
+    {
+        "id": "cs",
+        "extensions": "cs CS csx CSX cake CAKE",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\csharp\\\\cs.tmLanguage.json",
+        "languageServer": "",
+        "name": "C# Files (.cs, .csx & .cake)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\csharp\\\\cs.png",
+        "mimeType": "text/x-ext-cs"
+    },
+    {
+        "id": "cbl",
+        "extensions": "ccp CCP scbl SCBL cbl CBL cpy CPY cob COB dds DDS ss SS wks WKS pco PCO",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cobol\\\\cobol.tmLanguage.json",
+        "languageServer": "",
+        "name": "COBOL Files (.cbl, .ccp, .cob, .cpy, .dds, .pco, .scbl, .ss & .wks)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cobol\\\\cbl.png",
+        "mimeType": "text/x-ext-cbl"
+    },
+    {
+        "id": "ql",
+        "extensions": "ql QL qll QLL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\codeql\\\\ql.tmLanguage.json",
+        "languageServer": "",
+        "name": "CodeQL Files (.ql & .qll)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\codeql\\\\ql.png",
+        "mimeType": "text/x-ext-ql"
+    },
+    {
+        "id": "feature",
+        "extensions": "feature FEATURE testcase TESTCASE",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cucumber\\\\feature.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Cucumber Files (.feature & .testcase)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cucumber\\\\feature.png",
+        "mimeType": "text/x-ext-feature"
+    },
+    {
+        "id": "ex",
+        "extensions": "ex EX exs EXS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\elixir\\\\elixir.tmLanguage.json",
+        "languageServer": "",
+        "name": "Elixir Files (.ex & .exs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\elixir\\\\ex.png",
+        "mimeType": "text/x-ext-ex"
+    },
+    {
+        "id": "elm",
+        "extensions": "elm ELM",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\elm\\\\elm.tmLanguage.json",
+        "languageServer": "",
+        "name": "Elm Files (.elm)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\elm\\\\elm.png",
+        "mimeType": "text/x-ext-elm"
+    },
+    {
+        "id": "db",
+        "extensions": "db DB",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\epics\\\\db.tmLanguage.json",
+        "languageServer": "",
+        "name": "Epic Database Files (.db)",
+        "icon": "",
+        "mimeType": "text/x-ext-db"
+    },
+    {
+        "id": "dbd",
+        "extensions": "dbd DBD",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\epics\\\\dbd.tmLanguage.json",
+        "languageServer": "",
+        "name": "Epic Database Definition Files (.dbd)",
+        "icon": "",
+        "mimeType": "text/x-ext-db"
+    },
+    {
+        "id": "proto",
+        "extensions": "proto PROTO",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\epics\\\\proto.tmLanguage.json",
+        "languageServer": "",
+        "name": "Epic Streamdevice Protoype Files (.proto)",
+        "icon": "",
+        "mimeType": "text/x-ext-proto"
+    },
+    {
+        "id": "sub",
+        "extensions": "sub SUB subs SUBS substitutions SUBSTITUTIONS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\epics\\\\sub.tmLanguage.json",
+        "languageServer": "",
+        "name": "Epic Substitutions Files (.sub, .subs, .substitutions)",
+        "icon": "",
+        "mimeType": "text/x-ext-sub"
+    },
+    {
+        "id": "erl",
+        "extensions": "erl ERL hrl HRL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\erlang\\\\erlang.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Erlang Files (.erl & .hrl)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\erlang\\\\erl.png",
+        "mimeType": "text/x-ext-erl"
+    },
+    {
+        "id": "fs",
+        "extensions": "fs FS fsi FSI fsx FSX fsscript FSSCRIPT",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fsharp\\\\fsharp.tmLanguage.json",
+        "languageServer": "",
+        "name": "F# Files (.fs, .fsi, .fsx & .fsscript)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fsharp\\\\fs.png",
+        "mimeType": "text/x-ext-fs"
+    },
+    {
+        "id": "forth",
+        "extensions": "frt FRT fth FTH 4th 4TH forth FORTH",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\forth\\\\forth.tmLanguage.json",
+        "languageServer": "",
+        "name": "Forth Files (.frt, .fth, .4th & .forth)",
+        "icon": "",
+        "mimeType": "text/x-ext-forth"
+    },
+    {
+        "id": "f90",
+        "extensions": "f90 F90 f95 F95 f03 F03 f08 F08",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fortran\\\\fortran.tmLanguage.json",
+        "languageServer": "",
+        "name": "Fortran Files (.f03, .f08, .f90 & .f95)",
+        "icon": "",
+        "mimeType": "text/x-ext-forth"
+    },
+    {
+        "id": "ftl",
+        "extensions": "ftl FTL ftlx FTLX ftlh FTLH",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\freemarker\\\\ftl.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Freemarker Files (.ftl, .ftlx & .ftlh)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\freemarker\\\\ftl.png",
+        "mimeType": "text/x-ext-ftl"
+    },
+    {
+        "id": "fidl",
+        "extensions": "fidl FIDL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fidl\\\\fidl.tmLanguage.json",
+        "languageServer": "",
+        "name": "Fuchsia Files (.fidl)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fidl\\\\fidl.png",
+        "mimeType": "text/x-ext-fidl"
+    },
+    {
+        "id": "gspec",
+        "extensions": "gspec GSPEC",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\galen\\\\gspec.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Galen Files (.gspec)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\galen\\\\gspec.png",
+        "mimeType": "text/x-ext-gspec"
+    },
+    {
+        "id": "go",
+        "extensions": "go GO",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\go\\\\go.tmLanguage.json",
+        "languageServer": "",
+        "name": "Go Files (.go)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\go\\\\go.png",
+        "mimeType": "text/x-ext-go"
+    },
+    {
+        "id": "hbs",
+        "extensions": "handlebars HANDLEBARS hbs HBS hjs HJS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\handlebars\\\\handlebars.tmLanguage.json",
+        "languageServer": "",
+        "name": "Handlebar Files (.handlebars, .hbs & .hjs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\handlebars\\\\handlebars.png",
+        "mimeType": "text/x-ext-hbs"
+    },
+    {
+        "id": "hs",
+        "extensions": "hs HS hs-boot HS-BOOT hsig HSIG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\haskell.tmLanguage.json",
+        "languageServer": "",
+        "name": "Haskell Files (.hs, .hs-boot & .hsig)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\haskell.png",
+        "mimeType": "text/x-ext-hs"
+    },
+    {
+        "id": "hx",
+        "extensions": "hx HX dump DUMP",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haxe\\\\haxe.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Haxe Files (.hx & .dump)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haxe\\\\hx.png",
+        "mimeType": "text/x-ext-hx"
+    },
+    {
+        "id": "hlsl",
+        "extensions": "hlsl HLSL hlsli HLSLI fx FX fxh FXH vsh VSH psh PSH cginc CGINC comput COMPUT",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hlsl\\\\hlsl.tmLanguage.xml",
+        "languageServer": "",
+        "name": "HLSL Files (.cginc, .comput, .fx, .fxh, .hlsl, .hlsli, .psh, & .vsh)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hlsl\\\\hlsl.png",
+        "mimeType": "text/x-ext-hlsl"
+    },
+    {
+        "id": "http",
+        "extensions": "http HTTP",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\http\\\\http.tmLanguage.json",
+        "languageServer": "",
+        "name": "Http RestClient Files (.http)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\http\\\\http.png",
+        "mimeType": "text/x-ext-http"
+    },
+    {
+        "id": "lisp",
+        "extensions": "lisp LISP lsp LSP asd ASD asdf ASDF cl CL ros ROS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lisp\\\\lisp.tmLanguage.xml",
+        "languageServer": "",
+        "name": "LISP Files (.asd, .asdf, .cl, .lisp, .lsp & .ros)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lisp\\\\lisp.png",
+        "mimeType": "text/x-ext-lisp"
+    },
+    {
+        "id": "log",
+        "extensions": "log LOG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\log\\\\log.tmLanguage.json",
+        "languageServer": "",
+        "name": "LOG Files (.log)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\log\\\\log.png",
+        "mimeType": "text/x-ext-log"
+    },
+    {
+        "id": "lua",
+        "extensions": "lua LUA",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lua\\\\lua.tmLanguage.json",
+        "languageServer": "",
+        "name": "Lua Files (.lua)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lua\\\\lua.png",
+        "mimeType": "text/x-ext-lua"
+    },
+    {
+        "id": "md",
+        "extensions": "md MD",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\markdown.tmLanguage.json",
+        "languageServer": "",
+        "name": "Markdown Files (.md)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\md.png",
+        "mimeType": "text/x-ext-md"
+    },
+    {
+        "id": "nim",
+        "extensions": "nim NIM nims NIMS nim.cfg NIM.CFG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nim\\\\nim.tmLanguage.json",
+        "languageServer": "",
+        "name": "Nim Files (.nim, .nims & .nim.cfg)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nim\\\\nim.png",
+        "mimeType": "text/x-ext-nim"
+    },
+    {
+        "id": "scad",
+        "extensions": "scad SCAD",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\openscad\\\\scad.tmLanguage.xml",
+        "languageServer": "",
+        "name": "OpenSCAD Files (.scad)",
+        "icon": "",
+        "mimeType": "text/x-ext-scad"
+    },
+    {
+        "id": "pl",
+        "extensions": "pl PL pm PM pod POD t T psgi PSGI",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\perl\\\\perl.tmLanguage.json",
+        "languageServer": "",
+        "name": "Perl Files (.pl, .pm, .pod, .psgi & .t)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\perl\\\\pl.png",
+        "mimeType": "text/x-ext-pl"
+    },
+    {
+        "id": "pl6",
+        "extensions": "p6 P6 pl6 PL6 pm6 PM6 nqp NQP",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\perl6\\\\perl6.tmLanguage.json",
+        "languageServer": "",
+        "name": "Perl6 Files (.nqp, .p6, .pl6 & .pm6)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\perl6\\\\pl6.png",
+        "mimeType": "text/x-ext-pl6"
+    },
+    {
+        "id": "ps1",
+        "extensions": "ps1 PS1 psd1 PSD1 psm1 PSM1 psrc PSRC pssc PSSC",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\powershell\\\\powershell.tmLanguage.json",
+        "languageServer": "",
+        "name": "Powershell Files (.ps1, .psd1, .psm1, .psrc & .pssc)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\powershell\\\\ps1.png",
+        "mimeType": "text/x-ext-ps1"
+    },
+    {
+        "id": "py",
+        "extensions": "gyp GYP gypi GYPI ipy IPY py PY pyi PYI pyw PYW rpy RPY",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\python\\\\python.tmLanguage.json",
+        "languageServer": "",
+        "name": "Python Files (.gyp, .gypi, .ipy, .py, .pyi, .pyw & .rpy)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\python\\\\py.png",
+        "mimeType": "text/x-ext-py"
+    },
+    {
+        "id": "qs",
+        "extensions": "qs QS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\qsharp\\\\qsharp.tmLanguage.json",
+        "languageServer": "",
+        "name": "Q# Files (.qs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\qsharp\\\\qs.png",
+        "mimeType": "text/x-ext-qs"
+    },
+    {
+        "id": "cshtml",
+        "extensions": "cshtml CSHTML",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\razor\\\\cshtml.tmLanguage.json",
+        "languageServer": "",
+        "name": "Razor Files (.cshtml)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\razor\\\\cshtml.png",
+        "mimeType": "text/x-ext-cshtml"
+    },
+    {
+        "id": "rs",
+        "extensions": "rs RS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rust\\\\rust.tmLanguage.json",
+        "languageServer": "",
+        "name": "Rust Files (.rs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rust\\\\rs.png",
+        "mimeType": "text/x-ext-rs"
+    }
+]

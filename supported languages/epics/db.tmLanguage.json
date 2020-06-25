@@ -1,0 +1,86 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "EPICS database and template files syntax",
+    "scopeName": "source.epics.db",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#record_types"
+        },
+        {
+            "include": "#field_types"
+        },
+        {
+            "include": "#macros"
+        },
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.epics",
+                    "match": "\\b(record)\\b"
+                },
+                {
+                    "name": "constant.character.epics",
+                    "match": "\\b(field)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.epics",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [ 
+                {
+                    "name": "constant.character.escape.epics",
+                    "match": "\\\\.",
+                    "include": "#macros"
+                }
+            ]
+        },
+        "record_types": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.record",
+                    "match": "\\b(SCAN|PINI|aai|aao|ai|ao|aSub|bi|bo|calc|calcout|compress|dfanout|event|fanout|histogram|longin|longout|mbbi|mbbiDirect|mbbo|mbboDirect|permissive|sel|seq|state|stringin|stringout|subArray|sub|waveform)\\b"
+                }
+            ]
+        },
+        "field_types": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.field",
+                    "match": "\\b(SCAN|PINI|PHAS|EVNT|PRIO|DISV|DISA|SDIS|PROC|DISS|LSET|LCNT|PACT|FLNK|STAT|SEVR|NSTA|NSEV|ACKS|ACKT|UDF|SPVT|RSET|DSET|DPVT|TPRO|BKPT|NAME|DESC|ASG|TSE|TSEL|DTYP|MLOK|MLIS|DISP|PUTF|RPRO|ASP|PPN|PPNN|RDES|TIME|INP|DTYP|RVAL|VAL|SIMM|SIML|SVAL|SIOL|SIMS|OUT|OUTA|OUTB|OUTC|OUTD|OUTE|OUTF|OUTG|OUTH|OUTI|OUTJ|OUTK|OUTL|OUTM|OUTN|OUTO|OUTP|OUTQ|OUTR|OUTS|OUTT|OUTU|DTYP|VAL|OVAL|RVAL|RBV|DOL|OMSL|OIF|SIMM|SIML|SIOL|SIMS|IVOA|IVOV|PREC|EGU|DRVL|DRVH|ZNAM|ONAM|HIHI|HIGH|LOW|LOLO|HHSV|HSV|LSV|LLSV|HYST|CALC|INPA|INPB|INPC|INPD|INPE|INPF|INPG|INPH|INPI|INPJ|INPK|INPL|LNK1|LNK2|LNK3|LNK4|LNK5|LNK6|ZRVL|ONVL|TWVL|THVL|FRVL|FVVL|SXVL|SVVL|EIVL|NIVL|TEVL|ELVL|TVVL|TTVL|FTVL|FFVL|ZRST|ONST|TWST|THST|FRST|FVST|SXST|SVST|EIST|NIST|TEST|ELST|TVST|TTST|FTST|FFST|B0|B1|B2|B3|B4|B5|B6|B7|B8|B9|BA|BB|BC|BD|BE|BF|SNAM|FTA|FTB|FTC|FTD|FTE|FTF|FTG|FTH|FTI|FTJ|FTK|FTL|FTM|FTN|FTO|FTP|FTQ|FTR|FTS|FTT|FTU|NOA|NOB|NOC|NOD|NOE|NOF|NOG|NOH|NOI|NOJ|NOK|NOL|NOM|NON|NOO|NOP|NOQ|NOR|NOS|NOT|NOU|FTVA|FTVB|FTVC|FTVD|FTVE|FTVF|FTVG|FTVH|FTVI|FTVJ|FTVK|FTVL|FTVM|FTVN|FTVO|FTVP|FTVQ|FTVR|FTVS|FTVT|FTVU|NOVA|NOVB|NOVC|NOVD|NOVE|NOVF|NOVG|NOVH|NOVI|NOVJ|NOVK|NOVL|NOVM|NOVN|NOVO|NOVP|NOVQ|NOVR|NOVS|NOVT|NOVU|LINR|HOPR|LOPR|EGUL|EGUF|ZSV|OSV|COSV|UNSV|COSV|ZRSV|ONSV|TWSV|THSV|FRSV|FVSV|SXSV|SVSV|EISV|NISV|TESV|ELSV|TVSV|TTSV|FTSV|FFSV|NELM)\\b"
+                }
+            ]
+        },
+        "macros": {
+            "patterns": [
+                {
+                    "name": "variable.parameter",
+                    "match": "\\${[A-Z+a-z+0-9+_]+}"
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line.number-sign.epics",
+            "begin": "#",
+            "end": "^",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    }
+}

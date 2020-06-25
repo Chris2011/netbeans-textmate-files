@@ -1,0 +1,82 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "EPICS prototypes files syntax",
+    "scopeName": "source.epics.proto",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#integers"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#other_functions"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.epics",
+                    "match": "\\b(OutTerminator|InTerminator|ReadTimeout|WriteTimeout|PollPeriod|ReplyTimeout|ExtraInput)\\b"
+                },
+                {
+                    "name": "constant.character.epics",
+                    "match": "\\b(out|in)\\b"
+                },
+                {
+                    "name": "keyword.other",
+                    "match": "@\\b(init)\\b"
+                },
+                {
+                    "name": "variable.parameter",
+                    "match": "\\b(Ignore|CR|LF)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.epics",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "integers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric",
+                    "match": "[0-9]+"
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line.number-sign.epics",
+            "begin": "#",
+            "end": "^",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.epics",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "other_functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "[A-Z+a-z+0-9+_]+"
+                }
+            ]
+        }
+    }
+}

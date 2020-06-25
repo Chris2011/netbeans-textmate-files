@@ -1,0 +1,61 @@
+entity StatusCode provides Parsable {
+    field code: Int;
+    field name: String;
+
+    override static tryParse(name: String): Result<StatusCode, String> {
+        return switch(name) {
+            case "IO"      => ok(StatusCode@{1, name})
+            case "Network" => ok(StatusCode@{2, name})
+            case _         => err("Unknown code")
+        };
+    }
+}
+
+function isIOCode(s: StringOf<StatusCode>): Bool {
+    return s == StatusCode'IO';
+}
+
+isIOCode("IO");                               //type error not a StringOf<StatusCode>
+isIOCode(StatusCode'Input')                   //type error not a valid StatusCode string
+isIOCode(StringOf<StatusCode>::from("Input")) //runtime error not a valid StatusCode string
+
+isIOCode(StatusCode'Assert')               //false
+isIOCode(StringOf<StatusCode>::from("IO")) //true
+
+let ec: StatusCode = StatusCode@'IO';
+assert(ec.code == 1); //true
+
+concept WithName {
+    invariant $name != "";
+
+    field name: String;
+}
+
+concept Greeting {
+    abstract method sayHello(): String;
+
+    virtual method sayGoodbye(): String {
+        return "goodbye";
+    }
+}
+
+entity GenericGreeting provides Greeting {
+    const instance: GenericGreeting = GenericGreeting@{};
+
+    override method sayHello(): String {
+        return "hello world";
+    }
+}
+
+entity NamedGreeting provides WithName, Greeting {
+    override method sayHello(): String {
+        return String::concat("hello", " ", this.name);
+    }
+}
+
+GenericGreeting@{}.sayHello()         //"hello world"
+GenericGreeting::instance.sayHello()  //"hello world"
+
+NamedGreeting@{}.sayHello()           //type error no value provided for "name" field
+NamedGreeting@{name=""}.sayHello()    //invariant error
+NamedGreeting@{name="bob"}.sayHello() //"hello bob"

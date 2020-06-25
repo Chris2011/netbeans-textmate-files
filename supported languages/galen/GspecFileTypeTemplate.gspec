@@ -1,0 +1,61 @@
+@objects
+    header              id      header
+
+= Main section =
+    header:
+        height 40px 
+
+header:
+    height 35 to 45px 
+
+# example of using custom rules (functions)
+
+@set userMargin 5 to 10 px
+
+@objects
+    user-*      div.users-list .user
+
+@rule %{pattern} are below each other by %{distance} and aligned
+    @forEach [pattern] as object, prev as prevObject
+        ${object}:
+            below ${prevObject} ${distance}
+            aligned vertically all ${prevObject}
+
+= Checking all users =
+    | user-* are below each other by ${userMargin} and aligned
+
+
+
+@objects
+    header                  id  header
+    menu                    css #menu
+    content                 id  content
+    side-panel              id  side-panel
+    footer                  id  footer
+
+= Main section =
+    @on *
+        header:
+            inside screen 0px top, 0px left, 0px right
+
+        menu:
+            inside screen 0px left right
+            below header 0px
+
+        content:
+            below menu 0px
+            inside screen 0px left
+
+    @on desktop
+        side-panel:
+            below menu 0px
+            inside screen 0px right
+            width 300px
+            near content 0px right
+
+    @on mobile
+        content, side-panel:
+            width 100% of screen/width
+
+        side-panel:
+            below content 0px

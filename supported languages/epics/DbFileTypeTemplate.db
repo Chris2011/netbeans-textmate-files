@@ -1,0 +1,21 @@
+record(bo,"$(user):gunOnC") {
+ field(DESC,"Controls e-gun")
+}
+record(bo,"$(user):gunOnC") {
+ field(DESC,"Controls e-gun")
+ field(DTYP,"Soft Channel")
+ field(ZNAM,"Beam Off")
+ field(ONAM,"Beam On")
+}
+record(ao,"$(user):cathodeCurrentC") {
+ field(DESC,"set cathode current")
+ field(DTYP,"Raw Soft Channel")
+ field(SCAN,"1 second")
+ field(OROC,".5")
+ field(PREC,"2")
+ field(EGU,"Amps")
+ field(DRVH,"20")
+ field(DRVL,"0")
+ field(HOPR,"20")
+ field(LOPR,"0")
+}

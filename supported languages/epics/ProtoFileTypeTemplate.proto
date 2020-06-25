@@ -1,0 +1,33 @@
+OutTerminator = CR;
+InTerminator = CR;
+
+ReadConfiguration {
+  out "S";
+  in "!%s";
+}
+
+ClearCANUSBoverflow {
+  out "C";
+}
+
+ChangeUSBconfigure {
+  out "P00E300%(A)s%(B)s";
+}
+
+ChangeBaudrate {
+  out "P1%(A)s";
+}
+
+Reboot {
+  out "RA";
+}
+
+Test {
+   ExtraInput = Ignore;
+  out "%s";
+  in "%39c";
+}
+
+Input {
+  in "%39c";
+}

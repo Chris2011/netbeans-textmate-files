@@ -1,0 +1,12 @@
+#file G_TRAINING_T1_TEMPERATUR.template { 
+#  { 
+#    DEVICE =MTRT1 
+#    SIGNAL =0
+#  }
+#}
+
+file G_TRAINING_T1_COOLER.template { 
+  pattern 
+    {DEVICE    ADC1    ADC2    OUTPUT  }
+    {MTRT1-LI  "C3 S0" "C3 S1" "C2 S32"}
+}
