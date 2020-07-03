@@ -5,11 +5,12 @@ a lot of languages. Over 50 languages are supported.
 Those files where copied from differnet places, most of the time from the repos, that created similiar plugins for VS Code.
 
 ## How to use:
-1. Move the folder "supported languages" whereever you want.
-2. Open the `textmate-description.json` file.
-3. Change the paths to the correct folders/files.
-4. Open the `client.properties` file which is located here:
-    
+1. Move the folder `supported languages` to whereever you want.
+2. Open the `textmate-description.json` file of this repository.
+3. Change the paths to the correct folders/files (Depends on your system).
+4. Take the JSON and minify it [e.g. here](https://www.browserling.com/tools/json-minify).
+5. Open the `client.properties` (NetBeans related) file which is located here:
+
     Windows
 
         `%userprofile%\AppData\Roaming\NetBeans\YourNetBeansVersion\config\Preferences\org\netbeans\modules\lsp`
@@ -17,6 +18,16 @@ Those files where copied from differnet places, most of the time from the repos,
     Linux
 
         TBD
+
+6. Replace the array with your minified version.
+7. Restart NetBeans.
+8. After restarting NetBeans, go to `Options` -> `Editors (You need to have one Project open to see this Tab)` -> `Language Servers`.
+9. You should see now all added languages.
+10. To apply them to NetBeans, select one language in the table, click on edit, click on ok.
+11. Click apply inside the options.
+12. Wait couple of seconds until NetBeans responded again.
+13. Click ok.
+14. Done.
 
 ## Screenshot
 ![screenshot](./screenshots/screenshot.png)
