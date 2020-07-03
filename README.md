@@ -18,6 +18,11 @@ Those files where copied from differnet places, most of the time from the repos,
 
         TBD
 
+## Legend
+:x: - Known Problems, tickets already created.
+
+Some languages are also just embedded languages like handlebars or silverstripe or others, those are not well supported, because the implementation doesn't know the language around that
+
 ## Collected languages:
 * ANTLR(4) Files (.g & .g4) - [https://github.com/mike-lischke/vscode-antlr4/blob/master/syntaxes/antlr.json](https://github.com/mike-lischke/vscode-antlr4/blob/master/syntaxes/antlr.json)
 * Batch Files (.bat & .cmd) - [https://github.com/microsoft/vscode/blob/master/extensions/bat/syntaxes/batchfile.tmLanguage.json](https://github.com/microsoft/vscode/blob/master/extensions/bat/syntaxes/batchfile.tmLanguage.json)
@@ -38,7 +43,7 @@ Those files where copied from differnet places, most of the time from the repos,
 * F# Files (.fs, .fsi, .fsx & .fsscript) - [https://github.com/microsoft/vscode/blob/master/extensions/fsharp/syntaxes/fsharp.tmLanguage.json](https://github.com/microsoft/vscode/blob/master/extensions/fsharp/syntaxes/fsharp.tmLanguage.json)
 * Forth Files (.frt, .fth, .4th & .forth) - [https://github.com/hirnidrin/vscode-lang-forth/blob/master/syntaxes/forth.tmLanguage.json](https://github.com/hirnidrin/vscode-lang-forth/blob/master/syntaxes/forth.tmLanguage.json)
 * Fortran Files (.f03, .f08, .f90 & .f95) - [https://github.com/krvajal/vscode-fortran-support/blob/master/syntaxes/fortran_free-form.tmLanguage.json](https://github.com/krvajal/vscode-fortran-support/blob/master/syntaxes/fortran_free-form.tmLanguage.json)
-* Freemarker Files (.ftl) - [https://github.com/dcortes92/vs-freemarker/blob/master/syntaxes/ftl.tmLanguage](https://github.com/dcortes92/vs-freemarker/blob/master/syntaxes/ftl.tmLanguage)
+* :x: - [NETBEANS-4539](https://issues.apache.org/jira/browse/NETBEANS-4539) Freemarker Files (.ftl) - [https://github.com/dcortes92/vs-freemarker/blob/master/syntaxes/ftl.tmLanguage](https://github.com/dcortes92/vs-freemarker/blob/master/syntaxes/ftl.tmLanguage)
 * Fuchsia Files (.fidl) - [https://fuchsia.googlesource.com/vscode-language-fidl/+/refs/heads/master/syntaxes/fidl.tmLanguage.json](https://fuchsia.googlesource.com/vscode-language-fidl/+/refs/heads/master/syntaxes/fidl.tmLanguage.json)
 * Galen Files (.gspec) - [https://github.com/simonhdickson/galen-vscode-extension/blob/master/syntaxes/galen.tmLanguage](https://github.com/simonhdickson/galen-vscode-extension/blob/master/syntaxes/galen.tmLanguage) 
 * GLSL Files (.comp, .fshader, .frag, .geom, .glsl, .gs, .gsh, .gshader, .tesc, .tese, .vert, .vs & .vshader) - [https://github.com/euler0/sublime-glsl/blob/master/GLSL.tmLanguage](https://github.com/euler0/sublime-glsl/blob/master/GLSL.tmLanguage)
@@ -53,14 +58,14 @@ Those files where copied from differnet places, most of the time from the repos,
 * HLSL Files (.cginc, .comput, .fx, .fxh, .hlsl, .hlsli, .psh, & .vsh) - [https://github.com/Microsoft/vscode/blob/master/extensions/hlsl/syntaxes/hlsl.tmLanguage.json](https://github.com/Microsoft/vscode/blob/master/extensions/hlsl/syntaxes/hlsl.tmLanguage.json)
 * HQL Files (.hql) - [https://github.com/adidonato/language-hql/blob/master/grammars/hql.cson](https://github.com/adidonato/language-hql/blob/master/grammars/hql.cson)
 * Http RestClient Files (.http) - [https://github.com/Huachao/vscode-restclient/blob/master/syntaxes/http.tmLanguage.json](https://github.com/Huachao/vscode-restclient/blob/master/syntaxes/http.tmLanguage.json)
-* LaTeX Files (.tex) - [https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/LaTeX.tmLanguage.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/LaTeX.tmLanguage.json)
+* :x: - [NETBEANS-4540](https://issues.apache.org/jira/browse/NETBEANS-4540) LaTeX Files (.tex) - [https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/LaTeX.tmLanguage.json](https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/LaTeX.tmLanguage.json)
 * LISP Files (.asd, .asdf, .cl, .lisp, .lsp & .ros) - [https://github.com/ailisp/commonlisp-vscode/tree/master/syntaxes](https://github.com/ailisp/commonlisp-vscode/tree/master/syntaxes)
 * LLVM Files (.ll) - [https://github.com/whitequark/LLVM.tmBundle/blob/master/Syntaxes/LLVM.tmLanguage](https://github.com/whitequark/LLVM.tmBundle/blob/master/Syntaxes/LLVM.tmLanguage)
 * LOG Files (.log) - [https://github.com/Microsoft/vscode/blob/master/extensions/log/syntaxes/log.tmLanguage.json](https://github.com/Microsoft/vscode/blob/master/extensions/log/syntaxes/log.tmLanguage.json)
 * LOLCode Files (.lol) - [https://github.com/arwinneil/vscode-lolcode/blob/master/syntaxes/lol.tmLanguage](https://github.com/arwinneil/vscode-lolcode/blob/master/syntaxes/lol.tmLanguage)
 * Lua Files (.lua) - [https://github.com/microsoft/vscode/blob/master/extensions/lua/syntaxes/lua.tmLanguage.json](https://github.com/microsoft/vscode/blob/master/extensions/lua/syntaxes/lua.tmLanguage.json)
-* Markdown Files (.markdown & .md) - [https://github.com/microsoft/vscode-markdown-tm-grammar/blob/master/syntaxes/markdown.tmLanguage](https://github.com/microsoft/vscode-markdown-tm-grammar/blob/master/syntaxes/markdown.tmLanguage)
-* Nim Files (.nim, .nims & .nim.cfg) - [https://github.com/pragmagic/vscode-nim/blob/master/syntaxes/nim.json](https://github.com/pragmagic/vscode-nim/blob/master/syntaxes/nim.json)
+* :x: - [NETBEANS-4539](https://issues.apache.org/jira/browse/NETBEANS-4539) Markdown Files (.markdown & .md) - [https://github.com/microsoft/vscode-markdown-tm-grammar/blob/master/syntaxes/markdown.tmLanguage](https://github.com/microsoft/vscode-markdown-tm-grammar/blob/master/syntaxes/markdown.tmLanguage)
+* :x: - [NETBEANS-4530](https://issues.apache.org/jira/browse/NETBEANS-4530) Nim Files (.nim, .nims & .nim.cfg) - [https://github.com/pragmagic/vscode-nim/blob/master/syntaxes/nim.json](https://github.com/pragmagic/vscode-nim/blob/master/syntaxes/nim.json)
 * Objective-C Files (.m) - [https://github.com/microsoft/vscode/blob/master/extensions/objective-c/syntaxes/objective-c.tmLanguage.json](https://github.com/microsoft/vscode/blob/master/extensions/objective-c/syntaxes/objective-c.tmLanguage.json)
 * Objective-C++ Files (.mm) - [https://github.com/microsoft/vscode/blob/master/extensions/objective-c/syntaxes/objective-c%2B%2B.tmLanguage.json](https://github.com/microsoft/vscode/blob/master/extensions/objective-c/syntaxes/objective-c%2B%2B.tmLanguage.json)
 * OpenSCAD Files (.scad) - [https://github.com/tbuser/openscad.tmbundle/blob/master/Syntaxes/OpenSCAD.tmLanguage](https://github.com/tbuser/openscad.tmbundle/blob/master/Syntaxes/OpenSCAD.tmLanguage)
