@@ -1,6 +1,6 @@
-# NetBeans textmate files
+# Apache NetBeans textmate files
 This repository is a collection of textmate files to add them easily to NetBeans, to add basic syntax highlighting for
-a lot of languages. Over 50 languages are supported. NetBeans >= 12.0 is required. I know that the GUI was implemented earlier, so you can also try 11.3 but on your own risk.
+a lot of languages. Over 50 languages are supported. Apache NetBeans >= 12.0 is required. I know that the GUI was implemented earlier, so you can also try 11.3 but on your own risk.
 
 Those files where copied from differnet places, most of the time from the repos, that created similiar plugins for VS Code.
 
