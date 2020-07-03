@@ -18,6 +18,9 @@ Those files where copied from differnet places, most of the time from the repos,
 
         TBD
 
+## Screenshot
+![screenshot](./screenshots/screenshot.png)
+
 ## Legend
 :x: - Known Problems, tickets already created.
 
