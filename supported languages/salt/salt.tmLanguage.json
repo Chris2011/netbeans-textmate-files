@@ -1,89 +1,184 @@
 {
-    "name": "salt-vscode",
-    "displayName": "salt-vscode",
-    "description": "Salt language plugin",
-    "version": "0.0.1",
-    "publisher": "discus-lang",
+    "scopeName": "source.salt",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#expression"
+        },
+        {
+            "include": "#decl-type"
+        },
+        {
+            "include": "#decl-term"
+        },
+        {
+            "include": "#decl-test"
+        },
+        {
+            "include": "#decl-proc"
+        },
+        {
+            "include": "#decl-emit"
+        }
+    ],
     "repository": {
-        "type": "git",
-        "url": "git://github.com/discus-lang/salt-vscode.git"
-    },
-    "engines": {
-        "vscode": "^1.30.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onLanguage:salt"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "languages": [
-            {
-                "id": "salt",
-                "extensions": [
-                    ".salt"
-                ],
-                "aliases": [
-                    "Salt"
-                ],
-                "configuration": "data/salt.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "salt",
-                "scopeName": "source.salt",
-                "path": "./syntaxes/salt.tmGrammar.json"
-            }
-        ],
-        "commands": [
-        ],
-        "configuration": {
-            "type": "object",
-            "title": "Salt",
-            "properties": {
-                "salt.server.executable": {
-                    "type": "string",
-                    "default": "salt",
-                    "description": "How to start the 'salt' executable. You can set this to just 'salt' if the executable is in your path when you start VSCode, otherwise give the full path to it."
+        "comment": {
+            "patterns": [
+                {
+                    "include": "#comment-line"
+                }
+            ]
+        },
+        "comment-line": {
+            "match": "(--).*$\n?",
+            "name": "comment.line.salt"
+        },
+        "decl-type": {
+            "match": "^type",
+            "name": "keyword.control.declaration.type.salt"
+        },
+        "decl-term": {
+            "match": "^term",
+            "name": "keyword.control.declaration.term.salt"
+        },
+        "decl-proc": {
+            "match": "^proc",
+            "name": "keyword.control.declaration.proc.salt"
+        },
+        "decl-test": {
+            "match": "^(watch\\s+)?(test)\\s+(kind|type|eval|eval'type|eval'term|assert|exec|emit)\\b",
+            "captures": {
+                "1": {
+                    "name": "keyword.control.declaration.watch.salt"
                 },
-                "salt.trace.server": {
-                    "scope": "window",
-                    "type": "string",
-                    "enum": [
-                        "off",
-                        "messages",
-                        "verbose"
-                    ],
-                    "default": "off",
-                    "description": "Trace the communication between VS Code and the language server. The output appears in the Salt Language Server output channel in VSCode."
+                "2": {
+                    "name": "keyword.control.declaration.test.salt"
                 },
-                "salt.trace.debug": {
-                    "type": "string",
-                    "default": null,
-                    "description": "Log server side debug messages to this file. You will need to restart the Salt extension after changing this."
+                "3": {
+                    "name": "keyword.control.declaration.test.mode.salt"
                 }
             }
+        },
+        "decl-emit": {
+            "match": "^emit",
+            "name": "keyword.control.declaration.emit.salt"
+        },
+        "expression": {
+            "patterns": [
+                {
+                    "include": "#keyword-shared"
+                },
+                {
+                    "include": "#keyword-type"
+                },
+                {
+                    "include": "#keyword-term"
+                },
+                {
+                    "include": "#prim-operator"
+                },
+                {
+                    "include": "#prim-constructor"
+                },
+                {
+                    "include": "#prim-numeric"
+                },
+                {
+                    "include": "#paren-round-expression"
+                },
+                {
+                    "include": "#paren-square-expression"
+                },
+                {
+                    "include": "#paren-brace-expression"
+                }
+            ]
+        },
+        "keyword-shared": {
+            "match": "\\b(fun)\\b",
+            "name": "keyword.control.expression.shared.salt"
+        },
+        "keyword-type": {
+            "match": "\\b(forall|exists)\\b",
+            "name": "keyword.control.expression.type.salt"
+        },
+        "keyword-term": {
+            "match": "\\b(the|let|rec|in|do|if|then|else|case|of|box|run|proc|yield|call|with|seq|end|enter|leave|launch|return|cell|update|when|whens|done|match|loop|break|continue|while|bloc)\\b",
+            "name": "keyword.control.expression.term.salt"
+        },
+        "prim-operator": {
+            "match": "\\#[a-z][a-zA-Z0-9']*",
+            "name": "constant.primitive.operator.salt"
+        },
+        "prim-constructor": {
+            "match": "\\#[A-Z][a-zA-Z0-9']*",
+            "name": "constant.primitive.constructor.salt"
+        },
+        "prim-numeric": {
+            "match": "\\b[0-9]+\\b",
+            "name": "constant.numeric.salt"
+        },
+        "paren-round-expression": {
+            "begin": "\\(",
+            "end": "\\)",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.paren.round.open.salt"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.paren.round.close.salt"
+                }
+            },
+            "name": "expression.group.round.salt",
+            "patterns": [
+                {
+                    "include": "#expression"
+                }
+            ]
+        },
+        "paren-square-expression": {
+            "begin": "\\[",
+            "end": "\\]",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.paren.square.open.salt"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.paren.square.close.salt"
+                }
+            },
+            "name": "expression.group.square.salt",
+            "patterns": [
+                {
+                    "include": "#expression"
+                }
+            ]
+        },
+        "paren-brace-expression": {
+            "begin": "\\{",
+            "end": "\\}",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.paren.brace.open.salt"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.paren.brace.close.salt"
+                }
+            },
+            "name": "expression.group.brace.salt",
+            "patterns": [
+                {
+                    "include": "#expression"
+                }
+            ]
         }
-    },
-    "scripts": {
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "@types/mocha": "^2.2.42",
-        "@types/node": "^8.10.25",
-        "tslint": "^5.8.0",
-        "typescript": "^3.3.3",
-        "vscode": "^1.1.29"
-    },
-    "dependencies": {
-        "tsc": "^1.20150623.0",
-        "vsce": "^1.57.0",
-        "vscode-languageclient": "^3.5.1"
     }
 }

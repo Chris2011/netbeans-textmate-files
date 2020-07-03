@@ -168,7 +168,7 @@
         "languageServer": "",
         "name": "Fortran Files (.f03, .f08, .f90 & .f95)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fortran\\\\f90.png",
-        "mimeType": "text/x-ext-forth"
+        "mimeType": "text/x-ext-fortran"
     },
     {
         "id": "ftl",
@@ -361,10 +361,10 @@
     },
     {
         "id": "md",
-        "extensions": "md MD",
+        "extensions": "md MD markdown MARKDOWN",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\markdown.tmLanguage.json",
         "languageServer": "",
-        "name": "Markdown Files (.md)",
+        "name": "Markdown Files (.markdown & .md)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\md.png",
         "mimeType": "text/x-ext-md"
     },
@@ -473,7 +473,7 @@
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\ruby.tmLanguage.json",
         "languageServer": "",
         "name": "Ruby Files (.erb, .gemspec, .podspec, .rake, .rb, .rbi, .rbx, .rjs & .ru)",
-        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\ruby.png",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\rb.png",
         "mimeType": "text/x-ext-rb"
     },
     {
@@ -496,10 +496,10 @@
     },
     {
         "id": "sls",
-        "extensions": "j2 J2 jinja JINJA sls SLS tst TST",
+        "extensions": "sls SLS",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\saltstack.tmLanguage.json",
         "languageServer": "",
-        "name": "SaltStack Files (.j2, .jinja, .sls & .tst)",
+        "name": "SaltStack Files (.sls)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\sls.png",
         "mimeType": "text/x-ext-sls"
     },
@@ -560,7 +560,7 @@
     {
         "id": "shell",
         "extensions": "sh SH bash BASH bashrc BASHRC bash_aliases BASH_ALIASES bash_profile BASH_PROFILE bash_login BASH_LOGIN ebuild EBUILD install INSTALL profile PROFILE bash_logout BASH_LOGOUT zsh ZSH zshrc ZSHRC zprofile ZPROFILE zlogin ZLOGIN zlogout ZLOGOUT zshenv ZSHENV zsh-theme ZSH-THEME ksh KSH csh CSH cshrc CSHRC tcshrc TCSHRC yashrc YASHRC yash_profile YASH_PROFILE",
-        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\shell\\\\shell.tmLanguage.xml",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\shell\\\\shell.tmLanguage.json",
         "languageServer": "",
         "name": "Unix Shell Files (.bash, .bashrc, .bash_aliases, .bash_profile, .bash_login, .bash_logout, .csh, .cshrc, .ebuild, .install, .ksh, .profile, .sh, .tcshrc, .yash_profile, .yashrc, .zlogin, .zlogout, .zprofile, .zsh, .zsh-theme, .zshenv & .zshrc)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\shell\\\\sh.png",
