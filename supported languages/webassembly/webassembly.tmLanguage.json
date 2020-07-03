@@ -1,0 +1,354 @@
+{
+    "name": "WebAssembly",
+    "scopeName": "source.webassembly",
+    "fileTypes": [
+        "wast",
+        "wat"
+    ],
+    "firstLineMatch": "(?x)\n# Hashbang\n^\\#!.*(?:\\s|\\/|(?<=!)\\b)\n\t(?:wasm(?:time)?|wast)\n(?:$|\\s)\n|\n# Modeline\n(?i:\n\t# Emacs\n\t-\\*-(?:\\s*(?=[^:;\\s]+\\s*-\\*-)|(?:.*?[;\\s]|(?<=-\\*-))mode\\s*:\\s*)\n\t\t(?:wasm|wast|web[\\s-]?assembly)\n\t(?=[\\s;]|(?<![-*])-\\*-).*?-\\*-\n\t|\n\t# Vim\n\t(?:(?:\\s|^)vi(?:m[<=>]?\\d+|m)?|\\sex)(?=:(?=\\s*set?\\s[^\\n:]+:)|:(?!\\s*set?\\s))(?:(?:\\s|\\s*:\\s*)\\w*(?:\\s*=(?:[^\\n\\\\\\s]|\\\\.)*)?)*[\\s:](?:filetype|ft|syntax)\\s*=\n\t\t(?:wasm|wast|web[\\s-]?assembly)\n\t(?=\\s|:|$)\n)",
+    "patterns": [
+        {
+            "name": "comment.line.hashbang.webassembly",
+            "begin": "\\A(#!)",
+            "end": "$",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.comment.hashbang.webassembly"
+                }
+            }
+        },
+        {
+            "include": "#main"
+        }
+    ],
+    "repository": {
+        "main": {
+            "patterns": [
+                {
+                    "include": "#comment-line"
+                },
+                {
+                    "include": "#comment-block"
+                },
+                {
+                    "include": "#expression"
+                },
+                {
+                    "include": "#type"
+                },
+                {
+                    "include": "#instructions"
+                },
+                {
+                    "include": "#number"
+                },
+                {
+                    "include": "#name"
+                },
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#optional-immediate"
+                }
+            ]
+        },
+        "comment-line": {
+            "name": "comment.line.semicolon.webassembly",
+            "begin": ";;",
+            "end": "$",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.webassembly"
+                }
+            }
+        },
+        "comment-block": {
+            "name": "comment.block.semicolon.webassembly",
+            "begin": "\\(;",
+            "end": ";\\)",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.section.comment.begin.webassembly"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.comment.end.webassembly"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#comment-block"
+                }
+            ]
+        },
+        "expression": {
+            "patterns": [
+                {
+                    "name": "meta.expression.module.root.webassembly",
+                    "begin": "(\\()\\s*(module)(?=[\\s()]|$|;;)",
+                    "end": "\\)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "punctuation.section.expression.begin.webassembly"
+                        },
+                        "2": {
+                            "name": "keyword.control.module.webassembly"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.section.expression.end.webassembly"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "$self"
+                        }
+                    ]
+                },
+                {
+                    "name": "meta.expression.$2.webassembly",
+                    "begin": "(\\()\\s*(\\w+)(?=[\\s()]|$|;;)",
+                    "end": "\\)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "punctuation.section.expression.begin.webassembly"
+                        },
+                        "2": {
+                            "name": "entity.name.function.webassembly"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.section.expression.end.webassembly"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "$self"
+                        }
+                    ]
+                },
+                {
+                    "name": "meta.expression.webassembly",
+                    "begin": "\\(",
+                    "end": "\\)",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.section.expression.begin.webassembly"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.section.expression.end.webassembly"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "$self"
+                        }
+                    ]
+                }
+            ]
+        },
+        "instructions": {
+            "patterns": [
+                {
+                    "name": "keyword.control.instruction.$1.webassembly",
+                    "match": "(?x) \\b\n( block\n| br\n| br_if\n| br_table\n| call\n| call_indirect\n| else\n| if\n| end\n| export\n| loop\n| return\n| then\n) (?=[\\s()]|$|;;)"
+                },
+                {
+                    "name": "keyword.operator.declaration.instruction.$1.webassembly",
+                    "match": "(?x) \\b\n( data\n| elem\n| func\n| global\n| import\n| local\n| memory\n| module\n| offset\n| param\n| result\n| start\n| table\n| type\n) (?=[\\s()]|$|;;)"
+                },
+                {
+                    "name": "entity.name.function.scripting.instruction.$1.webassembly",
+                    "match": "(?x) \\b\n( assert_exhaustion\n| assert_invalid\n| assert_malformed\n| assert_return (?:_(?:arithmetic|canonical)_nan)?\n| assert_trap\n| assert_unlinkable\n| binary\n| get\n| input\n| invoke\n| output\n| quote\n| register\n| script\n) (?=[\\s()]|$|;;)"
+                },
+                {
+                    "name": "entity.name.function.misc.instruction.$1.webassembly",
+                    "match": "(?x) \\b\n( current_memory\n| drop\n| [gs]et_(?:global|local)\n| grow_memory\n| nop\n| select\n| tee_local\n| unreachable\n) (?=[\\s()]|$|;;)"
+                }
+            ]
+        },
+        "name": {
+            "name": "variable.other.name.webassembly",
+            "match": "(\\$)[-A-Za-z0-9_.+*/\\\\^~=<>!?@#$%&|:'`]+",
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.variable.webassembly"
+                }
+            }
+        },
+        "number": {
+            "patterns": [
+                {
+                    "name": "constant.language.nan.with-payload.webassembly",
+                    "match": "(?<!\\w)[-+]?nan(:)(0x[A-Fa-f0-9]+)",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.separator.payload.colon.webassembly"
+                        },
+                        "2": {
+                            "name": "constant.numeric.int.hex.payload.webassembly"
+                        }
+                    }
+                },
+                {
+                    "name": "constant.language.$1.webassembly",
+                    "match": "(?<!\\w)[-+]?(inf|nan)(?!\\w)"
+                },
+                {
+                    "name": "constant.numeric.float.hex.webassembly",
+                    "match": "(?x) (?<!\\w)\n[-+]?\n0x [A-Fa-f0-9]+\n(?: \\.[A-Fa-f0-9]* )?\n(?: [pP][-+]?[0-9]+ )?"
+                },
+                {
+                    "name": "constant.numeric.float.decimal.webassembly",
+                    "match": "(?<!\\w)[-+]?\\d+(?:\\.\\d*)?(?:[eE][-+]?[0-9]+)?"
+                },
+                {
+                    "name": "constant.numeric.int.hex.webassembly",
+                    "match": "(?<!\\w)[-+]?0x[A-Fa-f0-9]+"
+                },
+                {
+                    "name": "constant.numeric.int.decimal.webassembly",
+                    "match": "(?<!\\w)[-+]?\\d+"
+                }
+            ]
+        },
+        "optional-immediate": {
+            "match": "(?<!\\w)(align|offset)(=)(?=[-+]?(?:\\d|0x[\\dA-Fa-f]))",
+            "captures": {
+                "1": {
+                    "name": "variable.parameter.$1.webassembly"
+                },
+                "2": {
+                    "name": "keyword.operator.assignment.webassembly"
+                }
+            }
+        },
+        "string": {
+            "name": "string.quoted.double.webassembly",
+            "begin": "\"",
+            "end": "\"",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.webassembly"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.webassembly"
+                }
+            },
+            "patterns": [
+                {
+                    "match": "\\\\n",
+                    "name": "constant.character.escape.newline.webassembly"
+                },
+                {
+                    "match": "\\\\t",
+                    "name": "constant.character.escape.tab.webassembly"
+                },
+                {
+                    "match": "\\\\{2}",
+                    "name": "constant.character.escape.backslash.webassembly"
+                },
+                {
+                    "match": "\\\\'",
+                    "name": "constant.character.escape.quote.single.webassembly"
+                },
+                {
+                    "match": "\\\\\"",
+                    "name": "constant.character.escape.quote.double.webassembly"
+                },
+                {
+                    "match": "\\\\[0-9A-Fa-f]{2}|\\\\u({)[A-Fa-f0-9]+(})",
+                    "name": "constant.character.escape.hex.unicode.webassembly",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.unicode-escape.begin.bracket.curly.webassembly"
+                        },
+                        "2": {
+                            "name": "punctuation.definition.unicode-escape.end.bracket.curly.webassembly"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": {
+            "patterns": [
+                {
+                    "match": "(?x)\n\\b (i32|i64) (\\.)\n(?:\n\t((?:div|rem|shr|[lg][et])_[su]|and|c[lt]z|x?or|shl|rot[lr]|eqz|popcnt)\n\t|\n\t(\n\t\t(?<=i32 \\.) (?:reinterpret|trunc_[su]|wrap) |\n\t\t(?<=i64 \\.) (?:reinterpret|(?:extend|trunc)_[su])\n\t)\n\t(/) (i32|i64|f32|f64)\n)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.var.$1.webassembly"
+                        },
+                        "2": {
+                            "name": "punctuation.separator.method.period.webassembly"
+                        },
+                        "3": {
+                            "name": "entity.name.method-call.webassembly"
+                        },
+                        "4": {
+                            "name": "entity.name.method-call.webassembly"
+                        },
+                        "5": {
+                            "name": "keyword.operator.datatype.webassembly"
+                        },
+                        "6": {
+                            "name": "storage.type.var.$6.webassembly"
+                        }
+                    }
+                },
+                {
+                    "match": "(?x)\n\\b (f32|f64) (\\.)\n(?:\n\t(div|abs|neg|copysign|ceil|floor|trunc|nearest|le|lt|gt|ge|sqrt|min|max)\n\t|\n\t(\n\t\t(?<=f32 \\.)  (?:demote|convert_[su]|reinterpret) |\n\t\t(?<=f64 \\.) (?:promote|convert_[su]|reinterpret)\n\t)\n\t(/) (i32|i64|f32|f64)\n)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.var.$1.webassembly"
+                        },
+                        "2": {
+                            "name": "punctuation.separator.method.period.webassembly"
+                        },
+                        "3": {
+                            "name": "entity.name.method-call.webassembly"
+                        },
+                        "4": {
+                            "name": "entity.name.method-call.webassembly"
+                        },
+                        "5": {
+                            "name": "keyword.operator.datatype.webassembly"
+                        },
+                        "6": {
+                            "name": "storage.type.var.$6.webassembly"
+                        }
+                    }
+                },
+                {
+                    "match": "(?x) \\b\n(i32|i64|f32|f64)\n(?:\n\t(\\.)\n\t(const|add|sub|mul|(?:extend|trunc)_[su]|eq|ne\n\t|load((?:8|16|32)_[su])?\n\t|store(?:8|16|32)?)\n)?\n(?=[\\s()]|$|;;)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.var.$1.webassembly"
+                        },
+                        "2": {
+                            "name": "punctuation.separator.method.period.webassembly"
+                        },
+                        "3": {
+                            "name": "entity.name.method-call.webassembly"
+                        }
+                    }
+                },
+                {
+                    "match": "\\b(anyfunc)\\b",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.var.$1.webassembly"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

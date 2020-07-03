@@ -1,0 +1,89 @@
+{
+    "name": "salt-vscode",
+    "displayName": "salt-vscode",
+    "description": "Salt language plugin",
+    "version": "0.0.1",
+    "publisher": "discus-lang",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/discus-lang/salt-vscode.git"
+    },
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:salt"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "salt",
+                "extensions": [
+                    ".salt"
+                ],
+                "aliases": [
+                    "Salt"
+                ],
+                "configuration": "data/salt.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "salt",
+                "scopeName": "source.salt",
+                "path": "./syntaxes/salt.tmGrammar.json"
+            }
+        ],
+        "commands": [
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Salt",
+            "properties": {
+                "salt.server.executable": {
+                    "type": "string",
+                    "default": "salt",
+                    "description": "How to start the 'salt' executable. You can set this to just 'salt' if the executable is in your path when you start VSCode, otherwise give the full path to it."
+                },
+                "salt.trace.server": {
+                    "scope": "window",
+                    "type": "string",
+                    "enum": [
+                        "off",
+                        "messages",
+                        "verbose"
+                    ],
+                    "default": "off",
+                    "description": "Trace the communication between VS Code and the language server. The output appears in the Salt Language Server output channel in VSCode."
+                },
+                "salt.trace.debug": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Log server side debug messages to this file. You will need to restart the Salt extension after changing this."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "tslint": "^5.8.0",
+        "typescript": "^3.3.3",
+        "vscode": "^1.1.29"
+    },
+    "dependencies": {
+        "tsc": "^1.20150623.0",
+        "vsce": "^1.57.0",
+        "vscode-languageclient": "^3.5.1"
+    }
+}

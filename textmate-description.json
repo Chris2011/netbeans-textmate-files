@@ -45,11 +45,20 @@
         "mimeType": "text/x-ext-cs"
     },
     {
+        "id": "clj",
+        "extensions": "clj CLJ cljs CLJS cljc CLJS cljx CLJX clojure CLOJURE edn EDN",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\clojure\\\\clojure.tmLanguage.json",
+        "languageServer": "",
+        "name": "Clojure Files (.clj, .cljc, .cljs, .cljx, .clojure & .edn)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\clojure\\\\clj.png",
+        "mimeType": "text/x-ext-clj"
+    },
+    {
         "id": "cbl",
-        "extensions": "ccp CCP scbl SCBL cbl CBL cpy CPY cob COB dds DDS ss SS wks WKS pco PCO",
+        "extensions": "ccp CCP scbl SCBL cbl CBL cpy CPY cob COB dds DDS wks WKS pco PCO",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cobol\\\\cobol.tmLanguage.json",
         "languageServer": "",
-        "name": "COBOL Files (.cbl, .ccp, .cob, .cpy, .dds, .pco, .scbl, .ss & .wks)",
+        "name": "COBOL Files (.cbl, .ccp, .cob, .cpy, .dds, .pco, .scbl & .wks)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cobol\\\\cbl.png",
         "mimeType": "text/x-ext-cbl"
     },
@@ -158,7 +167,7 @@
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fortran\\\\fortran.tmLanguage.json",
         "languageServer": "",
         "name": "Fortran Files (.f03, .f08, .f90 & .f95)",
-        "icon": "",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\fortran\\\\f90.png",
         "mimeType": "text/x-ext-forth"
     },
     {
@@ -189,6 +198,15 @@
         "mimeType": "text/x-ext-gspec"
     },
     {
+        "id": "glsl",
+        "extensions": "comp COMP fshader FSHADER frag FRAG geom GEOM glsl GLSL gs GS gsh GSH gshader GSHADER tesc TESC tese TESE vert VERT vs VS vshader VSHADER",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\glsl\\\\glsl.tmLanguage.xml",
+        "languageServer": "",
+        "name": "GLSL Files (.comp, .fshader, .frag, .geom, .glsl, .gs, .gsh, .gshader, .tesc, .tese, .vert, .vs & .vshader)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\glsl\\\\glsl.png",
+        "mimeType": "text/x-ext-glsl"
+    },
+    {
         "id": "go",
         "extensions": "go GO",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\go\\\\go.tmLanguage.json",
@@ -196,6 +214,42 @@
         "name": "Go Files (.go)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\go\\\\go.png",
         "mimeType": "text/x-ext-go"
+    },
+    {
+        "id": "gql",
+        "extensions": "prisma PRIMSA graphqls GRAPHQLS graphql GRAPHQL gql GQL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\graphql\\\\graphql.tmLanguage.json",
+        "languageServer": "",
+        "name": "GraphQL Files (.gql, .graphql, .graphqls & .prisma)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\graphql\\\\gql.png",
+        "mimeType": "text/x-ext-gql"
+    },
+    {
+        "id": "dot",
+        "extensions": "dot DOT",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\graphviz\\\\graphviz.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Graphviz Files (.dot)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\graphviz\\\\dot.png",
+        "mimeType": "text/x-ext-dot"
+    },
+    {
+        "id": "hamlc",
+        "extensions": "hamlc HAMLC",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haml\\\\coffeeHaml.tmLanguage.json",
+        "languageServer": "",
+        "name": "HAML Coffee Files (.hamlc)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haml\\\\haml.png",
+        "mimeType": "text/x-ext-hamlc"
+    },
+    {
+        "id": "haml",
+        "extensions": "haml HAML inky-haml INKY-HAML",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haml\\\\rubyHaml.tmLanguage.json",
+        "languageServer": "",
+        "name": "HAML Ruby Files (.haml & .inky-haml)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haml\\\\haml.png",
+        "mimeType": "text/x-ext-haml"
     },
     {
         "id": "hbs",
@@ -209,10 +263,10 @@
     {
         "id": "hs",
         "extensions": "hs HS hs-boot HS-BOOT hsig HSIG",
-        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\haskell.tmLanguage.json",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\haskell.tmLanguage.xml",
         "languageServer": "",
         "name": "Haskell Files (.hs, .hs-boot & .hsig)",
-        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\haskell.png",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\haskell\\\\hs.png",
         "mimeType": "text/x-ext-hs"
     },
     {
@@ -227,11 +281,20 @@
     {
         "id": "hlsl",
         "extensions": "hlsl HLSL hlsli HLSLI fx FX fxh FXH vsh VSH psh PSH cginc CGINC comput COMPUT",
-        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hlsl\\\\hlsl.tmLanguage.xml",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hlsl\\\\hlsl.tmLanguage.json",
         "languageServer": "",
         "name": "HLSL Files (.cginc, .comput, .fx, .fxh, .hlsl, .hlsli, .psh, & .vsh)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hlsl\\\\hlsl.png",
         "mimeType": "text/x-ext-hlsl"
+    },
+    {
+        "id": "hql",
+        "extensions": "hql HQL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\hql\\\\hql.tmLanguage.json",
+        "languageServer": "",
+        "name": "HiveQL Files (.hql)",
+        "icon": "",
+        "mimeType": "text/x-ext-hql"
     },
     {
         "id": "http",
@@ -243,6 +306,15 @@
         "mimeType": "text/x-ext-http"
     },
     {
+        "id": "tex",
+        "extensions": "tex TEX",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\latex\\\\latex.tmLanguage.json",
+        "languageServer": "",
+        "name": "LaTeX Files (.tex)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\latex\\\\tex.png",
+        "mimeType": "text/x-ext-tex"
+    },
+    {
         "id": "lisp",
         "extensions": "lisp LISP lsp LSP asd ASD asdf ASDF cl CL ros ROS",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lisp\\\\lisp.tmLanguage.xml",
@@ -252,6 +324,15 @@
         "mimeType": "text/x-ext-lisp"
     },
     {
+        "id": "llvm",
+        "extensions": "ll LL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\llvm\\\\llvm.tmLanguage.xml",
+        "languageServer": "",
+        "name": "LLVM Files (.ll)",
+        "icon": "",
+        "mimeType": "text/x-ext-llvm"
+    },
+    {
         "id": "log",
         "extensions": "log LOG",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\log\\\\log.tmLanguage.json",
@@ -259,6 +340,15 @@
         "name": "LOG Files (.log)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\log\\\\log.png",
         "mimeType": "text/x-ext-log"
+    },
+    {
+        "id": "lol",
+        "extensions": "lol LOL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lolcode\\\\lolcode.tmLanguage.xml",
+        "languageServer": "",
+        "name": "LOLCode Files (.lol)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\lolcode\\\\lol.png",
+        "mimeType": "text/x-ext-lol"
     },
     {
         "id": "lua",
@@ -286,6 +376,24 @@
         "name": "Nim Files (.nim, .nims & .nim.cfg)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nim\\\\nim.png",
         "mimeType": "text/x-ext-nim"
+    },
+    {
+        "id": "m",
+        "extensions": "m M",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\objective-c\\\\objective-c.tmLanguage.json",
+        "languageServer": "",
+        "name": "Objective-C Files (.m)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\objective-c\\\\m.png",
+        "mimeType": "text/x-ext-m"
+    },
+    {
+        "id": "mm",
+        "extensions": "mm MM",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\objective-c\\\\objective-cpp.tmLanguage.json",
+        "languageServer": "",
+        "name": "Objective-C++ Files (.mm)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\objective-c\\\\mm.png",
+        "mimeType": "text/x-ext-mm"
     },
     {
         "id": "scad",
@@ -342,6 +450,15 @@
         "mimeType": "text/x-ext-qs"
     },
     {
+        "id": "r",
+        "extensions": "r R Rprofile s S",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\r\\\\r.tmLanguage.json",
+        "languageServer": "",
+        "name": "R Files (.r, .Rprofile & .s)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\r\\\\r.png",
+        "mimeType": "text/x-ext-r"
+    },
+    {
         "id": "cshtml",
         "extensions": "cshtml CSHTML",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\razor\\\\cshtml.tmLanguage.json",
@@ -351,6 +468,15 @@
         "mimeType": "text/x-ext-cshtml"
     },
     {
+        "id": "rb",
+        "extensions": "rb RB rbx RBX rjs RJX gemspec GEMSPEC rake RAKE ru RU erb ERB podspec PODSPEC rbi RBI",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\ruby.tmLanguage.json",
+        "languageServer": "",
+        "name": "Ruby Files (.erb, .gemspec, .podspec, .rake, .rb, .rbi, .rbx, .rjs & .ru)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\ruby.png",
+        "mimeType": "text/x-ext-rb"
+    },
+    {
         "id": "rs",
         "extensions": "rs RS",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rust\\\\rust.tmLanguage.json",
@@ -358,5 +484,131 @@
         "name": "Rust Files (.rs)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rust\\\\rs.png",
         "mimeType": "text/x-ext-rs"
+    },
+    {
+        "id": "salt",
+        "extensions": "salt",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\salt\\\\salt.tmLanguage.json",
+        "languageServer": "",
+        "name": "Salt Files (.salt)",
+        "icon": "",
+        "mimeType": "text/x-ext-salt"
+    },
+    {
+        "id": "sls",
+        "extensions": "j2 J2 jinja JINJA sls SLS tst TST",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\saltstack.tmLanguage.json",
+        "languageServer": "",
+        "name": "SaltStack Files (.j2, .jinja, .sls & .tst)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\sls.png",
+        "mimeType": "text/x-ext-sls"
+    },
+    {
+        "id": "scala",
+        "extensions": "sbt SBT scala SCALA",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\scala\\\\scala.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Scala Files (.sbt & .scala)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\scala\\\\scala.png",
+        "mimeType": "text/x-ext-scala"
+    },
+    {
+        "id": "scm",
+        "extensions": "rkt RKT sch SCH scm SCM",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\scheme\\\\scheme.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Scheme Files (.rkt, .sch & .scm)",
+        "icon": "",
+        "mimeType": "text/x-ext-scm"
+    },
+    {
+        "id": "ss",
+        "extensions": "ss SS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\silverstripe\\\\silverstripe.tmLanguage.json",
+        "languageServer": "",
+        "name": "SilverStripe Files (.ss)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\silverstripe\\\\ss.png",
+        "mimeType": "text/x-ext-ss"
+    },
+    {
+        "id": "st",
+        "extensions": "st ST",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\smalltalk\\\\smalltalk.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Smalltalk Files (.st)",
+        "icon": "",
+        "mimeType": "text/x-ext-st"
+    },
+    {
+        "id": "swift",
+        "extensions": "swift SWIFT",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\swift\\\\swift.tmLanguage.json",
+        "languageServer": "",
+        "name": "Swift Files (.swift)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\swift\\\\swift.png",
+        "mimeType": "text/x-ext-swift"
+    },
+    {
+        "id": "ltx",
+        "extensions": "bbx BBX cbx CBX cls CLS ltx LTX sty STY",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\tex\\\\tex.tmLanguage.json",
+        "languageServer": "",
+        "name": "TeX Files (.bbx, .cbx, .cls, .ltx & .sty)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\tex\\\\tex.png",
+        "mimeType": "text/x-ext-ltx"
+    },
+    {
+        "id": "shell",
+        "extensions": "sh SH bash BASH bashrc BASHRC bash_aliases BASH_ALIASES bash_profile BASH_PROFILE bash_login BASH_LOGIN ebuild EBUILD install INSTALL profile PROFILE bash_logout BASH_LOGOUT zsh ZSH zshrc ZSHRC zprofile ZPROFILE zlogin ZLOGIN zlogout ZLOGOUT zshenv ZSHENV zsh-theme ZSH-THEME ksh KSH csh CSH cshrc CSHRC tcshrc TCSHRC yashrc YASHRC yash_profile YASH_PROFILE",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\shell\\\\shell.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Unix Shell Files (.bash, .bashrc, .bash_aliases, .bash_profile, .bash_login, .bash_logout, .csh, .cshrc, .ebuild, .install, .ksh, .profile, .sh, .tcshrc, .yash_profile, .yashrc, .zlogin, .zlogout, .zprofile, .zsh, .zsh-theme, .zshenv & .zshrc)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\shell\\\\sh.png",
+        "mimeType": "text/x-ext-shell"
+    },
+    {
+        "id": "v",
+        "extensions": "v V vh VH vsh VSH",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\v\\\\v.tmLanguage.json",
+        "languageServer": "",
+        "name": "V Files (.v, .vh & .vsh)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\v\\\\v.png",
+        "mimeType": "text/x-ext-v"
+    },
+    {
+        "id": "vb",
+        "extensions": "bas BAS brs BRS vb VB vbs VBS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\vb\\\\vb.tmLanguage.json",
+        "languageServer": "",
+        "name": "Visual Basic Files (.bas, .brs, .vb & .vbs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\vb\\\\vb.png",
+        "mimeType": "text/x-ext-vb"
+    },
+    {
+        "id": "vue",
+        "extensions": "vue",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\vue\\\\vue.tmLanguage.json",
+        "languageServer": "",
+        "name": "Vuejs Files (.vue)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\vue\\\\vue.png",
+        "mimeType": "text/x-ext-vue"
+    },
+    {
+        "id": "wast",
+        "extensions": "wast WAST wat WAT",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\webassembly\\\\webassembly.tmLanguage.json",
+        "languageServer": "",
+        "name": "WebAssembly Files (.wast & .wat)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\webassembly\\\\wast.png",
+        "mimeType": "text/x-ext-wast"
+    },
+    {
+        "id": "yara",
+        "extensions": "yar YAR yara YARA",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\yara\\\\yara.tmLanguage.xml",
+        "languageServer": "",
+        "name": "YARA Files (.yar & .yara)",
+        "icon": "",
+        "mimeType": "text/x-ext-yara"
     }
 ]

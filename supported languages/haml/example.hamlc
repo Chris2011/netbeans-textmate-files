@@ -1,0 +1,9 @@
+hamlc.compile '%h1= @title'
+  cleanValue: false
+  escapeHtml: false
+
+express = require 'express'
+cons    = require 'consolidate'
+app     = express()
+
+app.engine 'hamlc', cons['haml-coffee']

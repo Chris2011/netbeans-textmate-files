@@ -1,0 +1,67 @@
+% ****** Simple LaTeX file ``simple.ltx'' ******
+%
+%  Note that comments start with a percent sign
+%
+%  Process this file using 
+%
+%  1)  latex2e simple.ltx
+%
+%      This makes a file called simple.dvi. 
+%      (Also simple.aux and simple.log.)
+%
+%  2)  dvips simple
+%
+%      This makes a Postscript file called simple.ps
+%
+%  3)  gv simple.ps
+%
+%      This displays the Postscript file on your screen
+%
+%  4)  lpr simple.ps
+%
+%      This prints the file on a Postscript printer
+%
+\documentclass[12pt]{article}
+\begin{document}
+
+% The next LaTeX commands define the title and author.
+
+\title{Why Air Molecules Don't Fall to the Ground}
+\author{Stu Dent\\Physics 4910}  % The double backslash \\ forces line breaks
+\date{\today}   % You can replace \today with a date you write out.
+
+% The next command actually creates the document header
+
+\maketitle
+
+% It doesn't matter how long or short your lines are, LaTeX fixes them.
+
+``Since gravity pulls on everything, why don't all the molecules in air fall to the ground?''
+
+% Any blank line breaks a paragraph.
+
+The questioner, your intended reader, is a curious and intelligent adult who has only a high school education. 
+
+\vspace{0.25in}
+
+Why don't air molecules fall to the ground?  The answer has to do with
+air pressure.  If we could remove all the air from a container, except
+for a single air molecule, that molecule would certainly fall to the
+bottom.  We would say the air pressure in that container is zero.  Now
+put all of the air back as before.  At ordinary temperatures the
+molecules are zipping around randomly and jostling each other.  This
+is the source of air pressure.  So our single air molecule is buffeted
+by its neighbors.  If it tries to fall to the bottom, the others tend
+to bump it back up.  
+
+Gravity still has an effect, because the air pressure at the bottom of
+the container is slightly higher than at the top.  So the more our
+molecule tries to move down, the more it is jostled by its neighbors,
+and the more it feels itself crowded back up.  It is actually the
+balance between this pressure variation and the pull of gravity that
+is responsible for keeping our molecule at the same height.  This
+argument applies to any molecule in the vessel or even in our
+atmosphere.  So we can thank our ordinary temperatures and pressures
+that the air stays more or less at the same height.
+
+\end{document}
