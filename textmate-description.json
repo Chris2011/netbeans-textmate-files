@@ -362,7 +362,7 @@
     {
         "id": "md",
         "extensions": "md MD markdown MARKDOWN",
-        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\markdown.tmLanguage.json",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\markdown.tmLanguage.xml",
         "languageServer": "",
         "name": "Markdown Files (.markdown & .md)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\markdown\\\\md.png",
@@ -547,6 +547,15 @@
         "name": "Swift Files (.swift)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\swift\\\\swift.png",
         "mimeType": "text/x-ext-swift"
+    },
+    {
+        "id": "tcl",
+        "extensions": "tcl TCL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\tcl\\\\tcl.tmLanguage.xml",
+        "languageServer": "",
+        "name": "TCL Files (.tcl)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\tcl\\\\tcl.png",
+        "mimeType": "text/x-ext-tcl"
     },
     {
         "id": "ltx",
