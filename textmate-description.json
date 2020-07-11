@@ -81,6 +81,15 @@
         "mimeType": "text/x-ext-feature"
     },
     {
+        "id": "d",
+        "extensions": "d D di DI",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\d\\\\d.tmLanguage.json",
+        "languageServer": "",
+        "name": "D Files (.d & .di)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\d\\\\d.png",
+        "mimeType": "text/x-ext-d"
+    },
+    {
         "id": "ex",
         "extensions": "ex EX exs EXS",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\elixir\\\\elixir.tmLanguage.json",
@@ -306,6 +315,15 @@
         "mimeType": "text/x-ext-http"
     },
     {
+        "id": "jl",
+        "extensions": "jl JL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\julia\\\\julia.tmLanguage.json",
+        "languageServer": "",
+        "name": "Julia Files (.jl)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\julia\\\\jl.png",
+        "mimeType": "text/x-ext-jl"
+    },
+    {
         "id": "tex",
         "extensions": "tex TEX",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\latex\\\\latex.tmLanguage.json",
@@ -394,6 +412,15 @@
         "name": "Objective-C++ Files (.mm)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\objective-c\\\\mm.png",
         "mimeType": "text/x-ext-mm"
+    },
+    {
+        "id": "ml",
+        "extensions": "ml ML",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ocaml\\\\ocaml.tmLanguage.xml",
+        "languageServer": "",
+        "name": "OCaml Files (.ml)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ocaml\\\\ml.png",
+        "mimeType": "text/x-ext-ml"
     },
     {
         "id": "scad",
@@ -487,7 +514,7 @@
     },
     {
         "id": "salt",
-        "extensions": "salt",
+        "extensions": "salt SALT",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\salt\\\\salt.tmLanguage.json",
         "languageServer": "",
         "name": "Salt Files (.salt)",
@@ -502,6 +529,15 @@
         "name": "SaltStack Files (.sls)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\sls.png",
         "mimeType": "text/x-ext-sls"
+    },
+    {
+        "id": "sass",
+        "extensions": "sass SASS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\sass\\\\sass.tmLanguage.json",
+        "languageServer": "",
+        "name": "SASS Files (.sass)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\sass\\\\sass.png",
+        "mimeType": "text/x-ext-sass"
     },
     {
         "id": "scala",
