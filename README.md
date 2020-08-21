@@ -9,7 +9,7 @@ Those files where copied from differnet places, most of the time from the repos,
 2. Open the `textmate-description.json` file of this repository.
 3. Change the paths to the correct folders/files (Depends on your system).
 4. Take the JSON and minify it [e.g. here](https://www.browserling.com/tools/json-minify).
-5. Open the `client.properties` (NetBeans related) file which is located here:
+5. If available, open the `client.properties` (NetBeans related) file which is located here:
 
     Windows
 
@@ -18,7 +18,7 @@ Those files where copied from differnet places, most of the time from the repos,
     Linux
 
         TBD
-
+6. If the folder and the file is not available (happens when you start NetBeans the first time and never touched the language server options), create the missing folder and the missing properties file and add this line to it `language.descriptions=[]`
 6. Replace the array with your minified version.
 7. Restart NetBeans.
 8. After restarting NetBeans, go to `Options` -> `Editors (You need to have one Project open to see this Tab)` -> `Language Servers`.
