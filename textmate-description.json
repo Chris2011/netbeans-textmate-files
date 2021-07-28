@@ -45,6 +45,15 @@
         "mimeType": "text/x-ext-cs"
     },
     {
+        "id": "cr",
+        "extensions": "cr CR",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\crystal\\\\cr.tmLanguage.json",
+        "languageServer": "",
+        "name": "Crystal Files (.cr)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\crystal\\\\cr.png",
+        "mimeType": "text/x-ext-cr"
+    },
+    {
         "id": "clj",
         "extensions": "clj CLJ cljs CLJS cljc CLJS cljx CLJX clojure CLOJURE edn EDN",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\clojure\\\\clojure.tmLanguage.json",
@@ -88,6 +97,15 @@
         "name": "D Files (.d & .di)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\d\\\\d.png",
         "mimeType": "text/x-ext-d"
+    },
+    {
+        "id": "dart",
+        "extensions": "dart DART",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\dart\\\\dart.tmLanguage.json",
+        "languageServer": "",
+        "name": "Dart Files (.dart)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\dart\\\\dart.png",
+        "mimeType": "text/x-ext-dart"
     },
     {
         "id": "ex",
@@ -205,6 +223,15 @@
         "name": "Galen Files (.gspec)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\galen\\\\gspec.png",
         "mimeType": "text/x-ext-gspec"
+    },
+    {
+        "id": "gitconfig",
+        "extensions": "gitconfig GITCONFIG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\git\\\\gitconfig.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Git Config Files (.gitconfig)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\git\\\\git.png",
+        "mimeType": "text/x-ext-gitcofig"
     },
     {
         "id": "glsl",
@@ -415,10 +442,10 @@
     },
     {
         "id": "ml",
-        "extensions": "ml ML",
+        "extensions": "ml ML mli MLI",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ocaml\\\\ocaml.tmLanguage.xml",
         "languageServer": "",
-        "name": "OCaml Files (.ml)",
+        "name": "OCaml Files (.ml & .mli)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ocaml\\\\ml.png",
         "mimeType": "text/x-ext-ml"
     },
@@ -459,6 +486,15 @@
         "mimeType": "text/x-ext-ps1"
     },
     {
+        "id": "purs",
+        "extensions": "purs PURS",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\purescript\\\\purs.tmLanguage.json",
+        "languageServer": "",
+        "name": "PureScript Files (.purs)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\purescript\\\\purs.png",
+        "mimeType": "text/x-ext-purescript"
+    },
+    {
         "id": "py",
         "extensions": "gyp GYP gypi GYPI ipy IPY py PY pyi PYI pyw PYW rpy RPY",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\python\\\\python.tmLanguage.json",
@@ -495,6 +531,42 @@
         "mimeType": "text/x-ext-cshtml"
     },
     {
+        "id": "re",
+        "extensions": "re RE rei REI",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reasonml\\\\reasonml.tmLanguage.json",
+        "languageServer": "",
+        "name": "ReasonML Files (.re & .rei)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reasonml\\\\re.png",
+        "mimeType": "text/x-ext-re"
+    },
+    {
+        "id": "opam",
+        "extensions": "opam OPAM",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reasonml\\\\opam.tmLanguage.json",
+        "languageServer": "",
+        "name": "ReasonML Opam Files (.opam)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reasonml\\\\re.png",
+        "mimeType": "text/x-ext-opam"
+    },
+    {
+        "id": "res",
+        "extensions": "res RES resi RESI",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rescript\\\\rescript.tmLanguage.json",
+        "languageServer": "",
+        "name": "ReSript Files (.res & .resi)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rescript\\\\rescript.png",
+        "mimeType": "text/x-ext-res"
+    },
+    {
+        "id": "rho",
+        "extensions": "rho RHO",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\rholang\\\\rho.tmLanguage.json",
+        "languageServer": "",
+        "name": "Rholang Files (.rho)",
+        "icon": "",
+        "mimeType": "text/x-ext-rho"
+    },
+    {
         "id": "rb",
         "extensions": "rb RB rbx RBX rjs RJX gemspec GEMSPEC rake RAKE ru RU erb ERB podspec PODSPEC rbi RBI",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\ruby\\\\ruby.tmLanguage.json",
@@ -529,6 +601,15 @@
         "name": "SaltStack Files (.sls)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\saltstack\\\\sls.png",
         "mimeType": "text/x-ext-sls"
+    },
+    {
+        "id": "abap",
+        "extensions": "abap ABAP",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\abap\\\\abap.tmLanguage.xml",
+        "languageServer": "",
+        "name": "SAP ABAP Files (.abap)",
+        "icon": "",
+        "mimeType": "text/x-ext-abap"
     },
     {
         "id": "sass",
@@ -576,6 +657,24 @@
         "mimeType": "text/x-ext-st"
     },
     {
+        "id": "snort",
+        "extensions": "snort SNORT rules RULES",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\snort\\\\snort.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Snort Infosec Files (.snort & .rules)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\snort\\\\rules.png",
+        "mimeType": "text/x-ext-snort"
+    },
+    {
+        "id": "sol",
+        "extensions": "sol SOL",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\solidity\\\\solidity.tmLanguage.json",
+        "languageServer": "",
+        "name": "Solidity Files (.sol)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\solidity\\\\sol.png",
+        "mimeType": "text/x-ext-sol"
+    },
+    {
         "id": "swift",
         "extensions": "swift SWIFT",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\swift\\\\swift.tmLanguage.json",
@@ -601,6 +700,15 @@
         "name": "TeX Files (.bbx, .cbx, .cls, .ltx & .sty)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\tex\\\\tex.png",
         "mimeType": "text/x-ext-ltx"
+    },
+    {
+        "id": "toml",
+        "extensions": "toml TOML",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\toml\\\\toml.tmLanguage.json",
+        "languageServer": "",
+        "name": "Toml Files (.toml)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\toml\\\\toml.png",
+        "mimeType": "text/x-ext-toml"
     },
     {
         "id": "shell",
@@ -646,6 +754,15 @@
         "name": "WebAssembly Files (.wast & .wat)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\webassembly\\\\wast.png",
         "mimeType": "text/x-ext-wast"
+    },
+    {
+        "id": "reg",
+        "extensions": "reg REG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reg\\\\reg.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Windows Registry Files (.reg)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\reg\\\\reg.png",
+        "mimeType": "text/x-ext-reg"
     },
     {
         "id": "yara",

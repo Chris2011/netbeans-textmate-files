@@ -1,0 +1,380 @@
+{
+    "name": "Rholang",
+    "scopeName": "source.rho",
+    "uuid": "36a6a366-07fb-4659-ba3d-86cfc03c2f1e",
+    "fileTypes": [
+        "rho"
+    ],
+    "patterns": [
+        {
+            "include": "#proc"
+        }
+    ],
+    "repository": {
+        "proc": {
+            "patterns": [
+                {
+                    "include": "#comment"
+                },
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#system-proc"
+                },
+                {
+                    "include": "#new"
+                },
+                {
+                    "include": "#contract"
+                },
+                {
+                    "include": "#for"
+                },
+                {
+                    "include": "#match-select"
+                },
+                {
+                    "include": "#constant"
+                },
+                {
+                    "include": "#proc-quote"
+                }
+            ]
+        },
+        "contract": {
+            "begin": "(?=\\bcontract\\b)",
+            "end": "(?<=\\})",
+            "patterns": [
+                {
+                    "begin": "\\bcontract\\b",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "keyword.control.contract.rho"
+                        }
+                    },
+                    "end": "(?=\\{)",
+                    "patterns": [
+                        {
+                            "match": "[-_'[:alnum:]]+",
+                            "captures": {
+                                "0": {
+                                    "name": "entity.name.function.rho"
+                                }
+                            }
+                        },
+                        {
+                            "match": "\\=",
+                            "name": "constant.language.contract.rho"
+                        },
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "include": "#proc"
+                }
+            ]
+        },
+        "for": {
+            "begin": "(?=\\bfor\\b)",
+            "end": "(?<=\\})",
+            "patterns": [
+                {
+                    "begin": "\\bfor\\b",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "keyword.control.for.rho"
+                        }
+                    },
+                    "end": "(?<=\\))",
+                    "patterns": [
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "include": "#proc"
+                }
+            ]
+        },
+        "new": {
+            "patterns": [
+                {
+                    "begin": "\\bnew\\b",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "constant.language.new.rho"
+                        }
+                    },
+                    "end": "\\bin\\b",
+                    "endCaptures": {
+                        "0": {
+                            "name": "constant.language.in.rho"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#comment"
+                        },
+                        {
+                            "include": "#string"
+                        },
+                        {
+                            "include": "#system-proc"
+                        },
+                        {
+                            "include": "#parameter"
+                        }
+                    ]
+                }
+            ]
+        },
+        "parameter": {
+            "match": "([@*]?)([-_'[:alnum:]]+)",
+            "captures": {
+                "1": {
+                    "name": "constant.language.rho"
+                },
+                "2": {
+                    "name": "variable.name.rho"
+                }
+            }
+        },
+        "match-select": {
+            "begin": "\\b(match|select)\\b",
+            "beginCaptures": {
+                "0": {
+                    "name": "keyword.control.match-select.rho"
+                }
+            },
+            "end": "(?=\\{)",
+            "patterns": [
+                {
+                    "include": "#proc"
+                }
+            ]
+        },
+        "string": {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.double.rho",
+            "patterns": [
+                {
+                    "match": "\\\\.",
+                    "name": "constant.character.escape.rho"
+                }
+            ]
+        },
+        "system-proc": {
+            "begin": "`",
+            "end": "`",
+            "name": "constant.language.system.rho",
+            "patterns": [
+                {
+                    "match": "\\\\.",
+                    "name": "constant.character.escape.rho"
+                }
+            ]
+        },
+        "proc-quote": {
+            "patterns": [
+                {
+                    "begin": "(@?)(\\{)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "constant.language.quote.rho"
+                        },
+                        "2": {
+                            "name": "punctuation.parenthesis.open.rho"
+                        }
+                    },
+                    "end": "\\}",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.parenthesis.close.rho"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "begin": "(!|!!)?(\\()",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "keyword.control.send.rho"
+                        },
+                        "2": {
+                            "name": "punctuation.parenthesis.open.rho"
+                        }
+                    },
+                    "end": "\\)",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.parenthesis.close.rho"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "begin": "(@?)(\\()",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "constant.language.quote.rho"
+                        },
+                        "2": {
+                            "name": "punctuation.parenthesis.open.rho"
+                        }
+                    },
+                    "end": "\\)",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.parenthesis.close.rho"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "begin": "(@?)(\\[)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "constant.language.quote.rho"
+                        },
+                        "2": {
+                            "name": "punctuation.parenthesis.open.rho"
+                        }
+                    },
+                    "end": "\\]",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.parenthesis.close.rho"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#proc"
+                        }
+                    ]
+                },
+                {
+                    "match": "([@*])([-_'[:alnum:]]+)",
+                    "captures": {
+                        "1": {
+                            "name": "constant.language.rho"
+                        }
+                    }
+                }
+            ]
+        },
+        "constant": {
+            "patterns": [
+                {
+                    "match": "\\b(_|Nil|true|false|Bool|Int|String|ByteArray|Uri|not|matches|and|or|Set)\\b",
+                    "name": "constant.language.rho"
+                },
+                {
+                    "match": "\\b(bundle)([+-0])?",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.bundle.rho"
+                        },
+                        "2": {
+                            "name": "constant.language.rho"
+                        }
+                    }
+                },
+                {
+                    "match": "\\b(if|else)\\b",
+                    "name": "keyword.control.if.rho"
+                },
+                {
+                    "match": "\\||/\\\\|\\\\/|~|/|%%|\\+|\\-|\\+\\+|<=|<|>=|>|==|!=|<-|=>|\\.\\.\\.",
+                    "name": "keyword.control.op.rho"
+                },
+                {
+                    "match": "-?\\b[0-9]+\\b",
+                    "name": "constant.numeric.rho"
+                },
+                {
+                    "begin": "(@)\"",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "constant.language.quote.rho"
+                        }
+                    },
+                    "end": "\"",
+                    "name": "string.quoted.double.rho",
+                    "patterns": [
+                        {
+                            "match": "\\\\.",
+                            "name": "constant.character.escape.rho"
+                        }
+                    ]
+                }
+            ]
+        },
+        "comment": {
+            "patterns": [
+                {
+                    "name": "comment.block.rho",
+                    "begin": "/\\*",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.rho"
+                        }
+                    },
+                    "end": "\\*/",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.rho"
+                        }
+                    }
+                },
+                {
+                    "begin": "(^\\s+)?(?=//)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "punctuation.whitespace.comment.leading.rho"
+                        }
+                    },
+                    "end": "(?=$)",
+                    "patterns": [
+                        {
+                            "name": "comment.block.documentation.rho",
+                            "begin": "(?<!/)///(?!/)",
+                            "beginCaptures": {
+                                "0": {
+                                    "name": "punctuation.definition.comment.rho"
+                                }
+                            },
+                            "end": "(?=$)"
+                        },
+                        {
+                            "name": "comment.line.double-slash.rho",
+                            "begin": "(?<!/)//(?!/)",
+                            "beginCaptures": {
+                                "0": {
+                                    "name": "punctuation.definition.comment.rho"
+                                }
+                            },
+                            "end": "(?=$)"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

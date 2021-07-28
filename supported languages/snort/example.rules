@@ -1,0 +1,13 @@
+log udp any any -> 192.168.0.0/24 1:1024
+alert tcp ![192.168.0.0/24,10.1.1.0/24] any -> \
+    [192.168.0.0/24,10.1.1.0/24] 111 (content:"|00 01 86 a5|"; \
+    msg:"external mountd access";)
+alert tcp $EXTERNAL_NET any -> 192.168.3.0/24 80 (msg:"Sample alert"; classtype: web-application-activity;reference:url,http://www.vorant.com/advisories/20060405.html;sid:2000123; rev:1;)
+alert tcp any any -> any 80 (msg:"port 80 connection!!!";flow: stateless; rev:1;)
+alert tcp any any -> any any (msg:”Sample alert”;)
+pass icmp $hOME_NET any -> any 443 (msg:"Illegal variable rule test";)
+alert tcp any any <> any 80 (msg:"MD5 Alert"; protected_content:"293C9EA246FF9985DC6F62A650F78986"; hash:md5; offset:0; length:4;)
+alert tcp any any <> any 80 (msg:"SHA256 Alert"; protected_content:"56D6F32151AD8474F40D7B939C2161EE2BBF10023F4AF1DBB3E13260EBDC6342"; hash:sha256; offset:0; length:4;)
+alert ip any any -> any any (msg:"Non payload detection option"; fragbits:M; fragoffset:0;)
+drop tcp 10.1.2.100 any > 10.1.1.100 22 ( msg:"Post-detection option test";flow:established,to_server; content:"SSH"; nocase; offset:0; depth:4; detection_filter:track by_src, count 30, seconds 60; sid:1000001; rev:1;)
+alert tcp any any -> any 80 (msg:"test for appid"; appid: http; sid:18759; reference:url,https://github.com/Cisco-Talos/snort-faq/blob/master/docs/README.appid rev:4;)n-attack; reference:url,www.cert.org/advisories/CA-2001 19.html; sid:1255; rev:7;)
