@@ -91,10 +91,10 @@
     },
     {
         "id": "d",
-        "extensions": "d D di DI",
+        "extensions": "d D di DI dpp DPP",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\d\\\\d.tmLanguage.json",
         "languageServer": "",
-        "name": "D Files (.d & .di)",
+        "name": "D Files (.d, .di & .dpp)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\d\\\\d.png",
         "mimeType": "text/x-ext-d"
     },
