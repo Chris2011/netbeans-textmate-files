@@ -13,11 +13,15 @@ Those files where copied from differnet places, most of the time from the repos,
 
     Windows
 
-        `%userprofile%\AppData\Roaming\NetBeans\YourNetBeansVersion\config\Preferences\org\netbeans\modules\lsp`
+        %userprofile%\AppData\Roaming\NetBeans\YourNetBeansVersion\config\Preferences\org\netbeans\modules\lsp
 
     Linux
 
-        TBD
+        $HOME/.netbeans/YourNetBeansVersion/config/Preferences/org/netbeans/modules/lsp
+        
+    MacOS
+    
+        $HOME/Library/Application\ Support/NetBeans/YourNetBeansVersion/config/Preferences/org/netbeans/modules/lsp
 6. If the folder and the file is not available (happens when you start NetBeans the first time and never touched the language server options), create the missing folder and the missing properties file and add this line to it `language.descriptions=[]`
 6. Replace the array with your minified version.
 7. Restart NetBeans.
