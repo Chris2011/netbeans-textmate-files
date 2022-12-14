@@ -81,6 +81,15 @@
         "mimeType": "text/x-ext-ql"
     },
     {
+        "id": "coffee",
+        "extensions": "coffee COFFEE cson CSON iced ICED",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\coffeescript\\\\coffeescript.tmLanguage.json",
+        "languageServer": "",
+        "name": "CoffeeScript Files (.coffee, .cson & .iced)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\coffeescript\\\\coffee.png",
+        "mimeType": "text/x-ext-coffee"
+    },
+    {
         "id": "feature",
         "extensions": "feature FEATURE testcase TESTCASE",
         "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\cucumber\\\\feature.tmLanguage.xml",
@@ -421,6 +430,15 @@
         "name": "Nim Files (.nim, .nims & .nim.cfg)",
         "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nim\\\\nim.png",
         "mimeType": "text/x-ext-nim"
+    },
+    {
+        "id": "nix",
+        "extensions": "nix NIX",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nix\\\\nix.tmLanguage.xml",
+        "languageServer": "",
+        "name": "Nix Files (.nix)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\nix\\\\nix.png",
+        "mimeType": "text/x-ext-nix"
     },
     {
         "id": "m",
