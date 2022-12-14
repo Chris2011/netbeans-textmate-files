@@ -16,3 +16,16 @@ let main () =
   (* code omitted *)
   factory#add_item "Cut" ~key:_X ~callback: html#cut
   ;;
+
+
+# let rec sort lst = 
+    match lst with
+      [] -> []
+    | head :: tail -> insert head (sort tail)
+  and insert elt lst =
+    match lst with
+      [] -> [elt]
+    | head :: tail -> if elt <= head then elt :: lst else head :: insert elt tail
+  ;;
+val sort : 'a list -> 'a list = <fun>
+val insert : 'a list -> 'a list = <fun>
