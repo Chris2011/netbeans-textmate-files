@@ -790,5 +790,15 @@
         "name": "YARA Files (.yar & .yara)",
         "icon": "",
         "mimeType": "text/x-ext-yara"
+    },
+    {
+        "id": "zig",
+        "extensions": "zig ZIG",
+        "syntaxGrammar": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\zig\\\\zig.tmLanguage.json",
+        "languageServer": "zls",
+        "name": "ZIG Files (.zig)",
+        "icon": "C:\\\\netbeans-textmate-files\\\\supported languages\\\\zig\\\\zig.png",
+        "mimeType": "text/x-ext-zig"
     }
+
 ]
