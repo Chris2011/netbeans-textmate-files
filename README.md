@@ -128,3 +128,5 @@ Some languages are also just embedded languages like handlebars or silverstripe 
 * WebAssembly Files (.wast & .wat) - [https://raw.githubusercontent.com/Alhadis/language-webassembly/master/grammars/webassembly.cson](https://raw.githubusercontent.com/Alhadis/language-webassembly/master/grammars/webassembly.cson)
 * Windows Registry Files (.reg) - [https://github.com/ionutvmi/reg-vscode/blob/master/syntaxes/reg.tmLanguage](https://github.com/ionutvmi/reg-vscode/blob/master/syntaxes/reg.tmLanguage)
 * YARA Files (.yar & .yara) - [https://github.com/infosec-intern/textmate-yara/blob/main/yara/syntaxes/yara.tmLanguage](https://github.com/infosec-intern/textmate-yara/blob/main/yara/syntaxes/yara.tmLanguage)
+* ZIG Files (.zig) - [https://github.com/ziglang/vscode-zig/tree/master/syntaxes/zig.tmLanguage.json](https://github.com/ziglang/vscode-zig/tree/master/syntaxes/zig.tmLanguage.json)
+
